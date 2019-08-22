@@ -1,6 +1,6 @@
 <template>
     <div>
-        <top-navbar /> 
+        <!-- <top-navbar />  -->
         
         <Content />
 

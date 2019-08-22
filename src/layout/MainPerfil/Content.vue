@@ -3,6 +3,8 @@
     <div>
         <header-component />
 
+        <!-- <personal-perfil /> -->
+
         <!-- About Section -->
         <section class="page-section bg-primary" id="about">
             <div class="container">
@@ -61,9 +63,11 @@
 
 <script>
 import HeaderComponent from "../../components/MainPerfil/Header.vue";
+// import PersonalPerfil from "../../components/MainPerfil/PersonalPerfil.vue";
 export default {
     components: {
-        HeaderComponent
+        HeaderComponent,
+        // PersonalPerfil
     }
 }
 </script>

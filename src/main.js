@@ -6,6 +6,7 @@ import './registerServiceWorker'
 
 //scss
 import './assets/scss/creative.scss'
+import './assets/css/fontawesome-free/css/all.css'
 
 Vue.config.productionTip = false
 
