@@ -13,28 +13,37 @@
                 <div class="check"><i class="fas fa-check"></i></div>
                 <h3 class="name">{{ name }}</h3>
                 <p class="title">Desarrollador JavaScript</p>
-                <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque aliquam aliquid porro!</p>
-                <button type="button" class="btn">Hire Me</button>
+                <p class="description">
+					Soy una persona que le gusta la tecnoligía y con una gran curiosidad de aprender nuevas formas
+					de desarrollar software, asi brindar una gran experiencia al usuario y contribuir con la comunidad 
+					<span style="font-weight: bold" >Open source</span>
+
+				</p>
+                <button type="button" class="btn btn-outline-primary  btn-pourple">Lenguajes</button>
             </div>
             
             <div class="social-icons">
                 <div class="icon">
-                    <a href="/"><i class="fab fa-dribbble"></i></a>
+                    <a :href="socialMedia.twitter"  target="_blank"><i class="fab fa-twitter"></i></a>
                     <!-- <h4>12.8k</h4>
                     <p>Followers</p> -->
                 </div>
                 
                 <div class="icon">
-                    <a href="#"><i class="fab fa-behance"></i></a>
+                    <a :href="socialMedia.github" target="_blank"><i class="fab fa-github" ></i></a>
                     <!-- <h4>12.8k</h4>
                     <p>Followers</p> -->
+                </div>
+
+				<div class="icon">
+                    <a :href="socialMedia.linkedin" target="_blank"><i class="fab fa-linkedin" ></i></a>
+                    <!-- <h4>12.8k</h4>
+                    <p>Followers</p> -->
+                </div>
+                <div class="icon">
+                    <a :href="socialMedia.instagram" target="_blank"><i class="fab fa-instagram"></i></a>                    
                 </div>
                 
-                <div class="icon">
-                    <a href="#"><i class="fab fa-twitter"></i></a>
-                    <!-- <h4>12.8k</h4>
-                    <p>Followers</p> -->
-                </div>
             </div>
         </div>
 
@@ -46,7 +55,14 @@
 export default {
     data() {
         return {
-            name: 'Max Aqquepucho'
+            name: 'Max Aqquepucho',
+			socialMedia: {
+				instagram: 'https://www.instagram.com/maxaqq',
+				github: 'https://www.github.com/maxaqquepucho',
+				linkedin: 'https://www.linkedin.com/in/max-romario-99340218a',
+				twitter: 'https://www.twitter.com/maxaqq'
+			}
+
         }
     }
     
@@ -58,7 +74,10 @@ $purple-gradient: linear-gradient(45deg, rgba(87,29,146,1) 0%,rgba(172,25,102,1)
 $purple-gradient: linear-gradient(to bottom right, #C90A6D, #FF48A0);
 $blue1-gradient: linear-gradient(to bottom right, #5E5AEC, #3F9EFC);
 $blue2-gradient: linear-gradient(to bottom right, #6452E9, #639FF9);
-$shadow: 0 13px 26px rgba(#000, .2), 0 3px 6px rgba(#000, .2);
+$black1-gradient: linear-gradient(to bottom right, #655d5d, #000000);
+$lightBlue1-gradient: linear-gradient(to bottom right, #5db6f7, #448cf9);
+$linkedin-gradient: linear-gradient(to bottom right, #2fa5e8, #006097);
+$shadow: 0 13px 26px rgba(0, 0, 0, 0), 0 3px 6px rgba(0, 0, 0, 0.2);
 
 // ------------------------------------------------
 
@@ -136,7 +155,7 @@ $shadow: 0 13px 26px rgba(#000, .2), 0 3px 6px rgba(#000, .2);
 
 .wrapper {
     width: 320px;
-    height: 540px;
+    // height: 540px;
     background: #FDFEFF;
 	transition: background .6s ease;
 	border-radius: 10px;
@@ -174,7 +193,7 @@ $shadow: 0 13px 26px rgba(#000, .2), 0 3px 6px rgba(#000, .2);
 		.check {
 			position: absolute;
 			right: 5em;
-			bottom: 16.7em;
+			bottom: 20.7em;
 			i {
 				color: #fff;
 				width: 20px;
@@ -222,20 +241,33 @@ $shadow: 0 13px 26px rgba(#000, .2), 0 3px 6px rgba(#000, .2);
 			margin-bottom: 1.3em;
 		}
 		
-		.btn {
+		// .btn {
+		// 	color: #fff;
+		// 	width: 130px;
+		// 	height: 42px;
+		// 	outline: none;
+		// 	border: none;
+		// 	display: block;
+		// 	cursor: pointer;
+		// 	font-weight: 300;
+		// 	margin-left: auto;
+		// 	margin-right: auto;
+		// 	border-radius: 70px;
+		// 	box-shadow: 0 13px 26px rgba(#000, .16), 0 3px 6px rgba(#000, .16);
+		// 	background: $purple-gradient;
+		// }
+
+		.btn-pourple {
+			color: #7952b3;
+			border-color: #7952b3;
+			border-radius: 25px;
+			padding: 7px 18px 7px 18px
+		}
+
+		.btn-pourple:hover {
 			color: #fff;
-			width: 130px;
-			height: 42px;
-			outline: none;
-			border: none;
-			display: block;
-			cursor: pointer;
-			font-weight: 300;
-			margin-left: auto;
-			margin-right: auto;
-			border-radius: 70px;
-			box-shadow: 0 13px 26px rgba(#000, .16), 0 3px 6px rgba(#000, .16);
-			background: $purple-gradient;
+		    background-color: #7952b3;
+    		border-color: #7952b3;
 		}
 	}
 	
@@ -250,27 +282,32 @@ $shadow: 0 13px 26px rgba(#000, .2), 0 3px 6px rgba(#000, .2);
 			flex-direction: column;
 			a {
 				color: #fff;
-				width: 60px;
-				height: 60px;
-				font-size: 28px;
-				line-height: 60px;
+				width: 50px;
+				height: 50px;
+				font-size: 23px;
+				line-height: 51px;
 				text-align: center;
 				border-radius: 30px;
 				box-shadow: $shadow;
 			}
 			&:nth-of-type(1) {
 				a {
-					background: $purple-gradient;
+					background: $lightBlue1-gradient;
 				}
 			}
 			&:nth-of-type(2) {
 				a {
-					background: $blue1-gradient;
+					background: $black1-gradient;
 				}
 			}
 			&:nth-of-type(3) {
 				a {
-					background: $blue2-gradient;
+					background: $linkedin-gradient;
+				}
+			}
+			&:nth-of-type(4) {
+				a {
+					background: $purple-gradient;
 				}
 			}
 			

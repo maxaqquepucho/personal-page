@@ -25,12 +25,12 @@ header.masthead {
       font-size: 1.15rem;
     }
     h1 {
-      font-size: 3rem;
+      font-size: 2.8rem;
     }
   }
   @include media-breakpoint-up(xl) {
     h1 {
-      font-size: 3.5rem;
+      font-size: 3rem;
     }
   }
 }

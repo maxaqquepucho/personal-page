@@ -8,6 +8,10 @@ import './registerServiceWorker'
 import './assets/scss/creative.scss'
 import './assets/css/fontawesome-free/css/all.css'
 
+import Prism from 'prismjs';
+
+Prism.highlightAll();
+
 Vue.config.productionTip = false
 
 new Vue({

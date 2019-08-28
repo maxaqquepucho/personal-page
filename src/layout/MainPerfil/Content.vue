@@ -1,23 +1,9 @@
 <template>
 
     <div>
-        <header-component />
+        <!-- <header-component /> -->
 
-        <!-- <personal-perfil /> -->
-
-        <!-- About Section -->
-        <section class="page-section bg-primary" id="about">
-            <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-lg-8 text-center">
-                <h2 class="text-white mt-0">We've got what you need!</h2>
-                <hr class="divider light my-4">
-                <p class="text-white-50 mb-4">Start Bootstrap has everything you need to get your new website up and running in no time! Choose one of our open source, free to download, and easy to use themes! No strings attached!</p>
-                <a class="btn btn-light btn-xl js-scroll-trigger" href="#services">Get Started!</a>
-                </div>
-            </div>
-            </div>
-        </section>
+        <mastery-container />
 
         <!-- Services Section -->
         <section class="page-section" id="services">
@@ -56,6 +42,37 @@
                 </div>
             </div>
         </section>
+
+        <!-- About Section -->
+        <section class="slide-section " >
+
+            <div class="slide">
+                <hooper :settings="hooperSettings" :autoPlay="true"  :playSpeed="3000" style="height: 100%">
+                    
+                    <slide v-for="(slide, i)  in slides" :key="i">
+                        <div class="position-relative mt-5 " style="">
+                            <div class="mb-4">
+                                <h3 class="text-center">{{ slide.title }}</h3>
+                                <hr class="divider my-3">
+                            </div>
+                            <div class="img-container">
+                                <img class="img-slide "  :src="slide.img" alt="">
+                            </div>
+                            
+                        </div>
+                    </slide>
+                    
+                
+                    <hooper-navigation slot="hooper-addons"></hooper-navigation>
+                    <hooper-pagination slot="hooper-addons"></hooper-pagination>
+                </hooper>
+
+                <div class="mt-3 text-center">
+                    <button class="btn btn-outline-primary btn-slide"> Ver más </button>
+                </div>
+            </div>
+            
+        </section>
     </div>
 
 
@@ -63,11 +80,102 @@
 
 <script>
 import HeaderComponent from "../../components/MainPerfil/Header.vue";
-// import PersonalPerfil from "../../components/MainPerfil/PersonalPerfil.vue";
+import MasteryContainer from "../../components/Sections/MasteryContainer.vue";
+
+import { 
+        Hooper,
+        Slide,
+        Progress as HooperProgress,
+        Pagination as HooperPagination,
+        Navigation as HooperNavigation
+    } from 'hooper';
+
+//CSS    
+import 'hooper/dist/hooper.css';
 export default {
+    data() {
+        return {
+            hooperSettings: {
+                itemsToShow: 1,
+                wheelControl: false
+                // centerMode: true
+            },
+            slides: [
+                {
+                    title: 'Proyecto Medic',
+                    img: 'https://portafolio-s3-demo.s3-sa-east-1.amazonaws.com/personal-page/slide5.png'
+                },
+                {
+                    title: 'Proyecto Medic',
+                    img: 'https://portafolio-s3-demo.s3-sa-east-1.amazonaws.com/personal-page/slide6.png'
+                },
+                {
+                    title: 'Proyecto owlfiles',
+                    img: 'https://portafolio-s3-demo.s3-sa-east-1.amazonaws.com/personal-page/slide7.png'
+                }
+            ]
+        };
+    },
     components: {
         HeaderComponent,
-        // PersonalPerfil
+        Hooper,
+        Slide,
+        HooperProgress,
+        HooperPagination,
+        HooperNavigation,
+        MasteryContainer
     }
 }
 </script>
+<style scoped>
+    .slide-section {
+
+        /* height: 33em; */
+
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .slide-section .slide {
+        width: 70%;
+
+    }
+
+    .slide-section .slide .img-slide {
+        width:100%;
+        height: 100%;
+        /* max-height: 500px; */
+        /* opacity:.7; */
+        object-fit: scale-down;
+        /* border-radius: 5px; */
+    }
+
+    .slide-section .slide .bg-img {
+        position: absolute;
+        width:100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.356);
+        box-shadow: 1px 1px 1px 1px rgba(0,0,0,0.75);
+        top: 0;
+        
+    }    
+
+    .slide-section .slide h3 {
+        /* font-size: 1.5rem; */
+    }
+
+    .slide-section .slide .img-container {
+        height: 100%;
+        max-height: 500px;
+        border: solid 1px #cccccc87;
+        overflow: hidden;
+        border-radius: 5px;
+    }
+
+    .btn-slide {
+        border-radius: 25px;
+        padding: 5px 20px 5px 20px;
+    }
+</style>
