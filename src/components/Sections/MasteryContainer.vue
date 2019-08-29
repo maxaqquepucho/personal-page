@@ -1,11 +1,17 @@
 <template>
-    <div class="container mt-5 mb-5" id="gallery">
-        <mastery-card class="gallery-item" v-for="(card, i)  in cards" :key="i" :card="card"  />
+    <div class="masonry-layout mt-5 mb-5" :class="{ [`columns-${ columnsCount }`]: true }">
+
+        <masonry-column
+            class="masonry-column "          
+            :class="{ [`column-${ i+1 }`]: true }" 
+            v-for="(column, i)  in masonryLayoutReact" :key="i" :column="column"  />       
         
     </div>
 </template>
 <script>
-import MasteryCard from "../general/MasteryCard.vue";
+
+import MasonryColumn from "../general/MasonryColumn.vue";
+
 export default {
     data() {
         return {
@@ -20,7 +26,7 @@ export default {
                     img: 'https://portafolio-s3-demo.s3-sa-east-1.amazonaws.com/personal-page/cards/js.jpg'
                 },
                 {
-                    img: 'https://portafolio-s3-demo.s3-sa-east-1.amazonaws.com/personal-page/cards/nodejs.svg'
+                    img: 'https://portafolio-s3-demo.s3-sa-east-1.amazonaws.com/personal-page/cards/nodejs.png'
                 },
                 {
                     img: 'https://portafolio-s3-demo.s3-sa-east-1.amazonaws.com/personal-page/cards/php.jpg'
@@ -31,11 +37,39 @@ export default {
                 {
                     img: 'https://portafolio-s3-demo.s3-sa-east-1.amazonaws.com/personal-page/cards/vue.png'
                 }
-            ]
+            ],                  
+            columnsCount: 3
         }
     },
-    components: {
-        MasteryCard
+    components: {       
+        MasonryColumn
+    },
+    computed: {
+        masonryLayoutReact() {
+            let columnsElements = []
+        
+            for( let i = 0; i < this.columnsCount; i++){
+
+                let columnObj = []
+                    
+                columnsElements.push(columnObj)
+            }
+        
+            for(let m = 0; m < Math.ceil(this.cards.length / this.columnsCount); m++){
+
+                for(let n = 0; n < this.columnsCount; n++) {
+
+                    let item = this.cards[ m * this.columnsCount + n]
+                    
+                    if (item) {
+                        columnsElements[n].push(item)                        
+                    }                  
+                   
+                }
+            }           
+
+            return columnsElements
+        }
     },
     methods: {
         masonryLayout(containerElem, itemsElems, columns) {
@@ -56,20 +90,21 @@ export default {
                     item.classList.add('masonry-item')
                 }
             }
-        }
+        },
+        
     },
     mounted() {
-        this.masonryLayout(document.getElementById('gallery'),
-              document.querySelectorAll('.gallery-item'), 1)
+        
+       
     }
     
 }
 </script>
-<style lang="scss" scoped>
+<style lang="scss" >
 
 .masonry-layout {
     --columns: 1;
-    --gap: 1.2rem;    
+    --gap: 2rem;    
     $columns: 6;
   
     display: grid;

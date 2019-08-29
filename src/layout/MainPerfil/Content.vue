@@ -3,7 +3,7 @@
     <div>
         <!-- <header-component /> -->
 
-        <mastery-container />
+        <router-view />
 
         <!-- Services Section -->
         <section class="page-section" id="services">
@@ -80,7 +80,7 @@
 
 <script>
 import HeaderComponent from "../../components/MainPerfil/Header.vue";
-import MasteryContainer from "../../components/Sections/MasteryContainer.vue";
+
 
 import { 
         Hooper,
@@ -123,7 +123,7 @@ export default {
         HooperProgress,
         HooperPagination,
         HooperNavigation,
-        MasteryContainer
+        
     }
 }
 </script>

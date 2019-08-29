@@ -12,7 +12,14 @@ export default new Router({
   routes: [
     {
       path: '/',      
-      component: LayoutMainPerfil
+      component: LayoutMainPerfil,
+      redirect: '/home',
+      children: [
+        {
+          path: 'home',
+          component: () => import('./views/Home.vue')
+        }
+      ]
     },
     {
       path: '/about',
