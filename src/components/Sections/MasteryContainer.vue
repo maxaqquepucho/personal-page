@@ -38,7 +38,7 @@ export default {
                     img: 'https://portafolio-s3-demo.s3-sa-east-1.amazonaws.com/personal-page/cards/vue.png'
                 }
             ],                  
-            columnsCount: 3
+            columnsCount: 2
         }
     },
     components: {       
@@ -94,7 +94,22 @@ export default {
         
     },
     mounted() {
-        
+        window.addEventListener('resize', () => {
+            
+
+            if (window.outerWidth < 660 || window.innerWidth < 660) {
+                this.columnsCount = 1
+            } else {
+                this.columnsCount = 2
+            }
+
+        })
+
+        if (window.outerWidth < 660 || window.innerWidth < 660) {
+            this.columnsCount = 1
+        } else {
+            this.columnsCount = 2
+        }
        
     }
     

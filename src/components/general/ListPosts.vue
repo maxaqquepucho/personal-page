@@ -1,13 +1,14 @@
 <template>
     <div class="posts-container mt-5">
         <h5>Proyectos Relevantes</h5>
-        <div class="post-item" v-for="(a, i) in 4" :key="i">
+        <div class="post-item" v-for="(post, i) in posts" :key="i">
             <div class="post-img">
                 <a href="">
                     <div class="img-container">
-                        <img src="https://portafolio-s3-demo.s3-sa-east-1.amazonaws.com/personal-page/cards/vue-square.jpg" alt="">
+                        <img :src="post.img" alt="">
                     </div>
                 </a>
+                <div class="float-icon"> 0</div>
             </div>
             <div class="post-content" >
                 <span class="categories">
@@ -24,6 +25,33 @@
 </template>
 <script>
 export default {
+    data() {
+        return {
+            posts: [
+                {
+                    img: 'https://portafolio-s3-demo.s3-sa-east-1.amazonaws.com/personal-page/square/dart-square.jpg'
+                },
+                {
+                    img: 'https://portafolio-s3-demo.s3-sa-east-1.amazonaws.com/personal-page/square/flutter-square.png'
+                },
+                {
+                    img: 'https://portafolio-s3-demo.s3-sa-east-1.amazonaws.com/personal-page/square/js-square.png'
+                },
+                {
+                    img: 'https://portafolio-s3-demo.s3-sa-east-1.amazonaws.com/personal-page/square/node-square.png'
+                },
+                {
+                    img: 'https://portafolio-s3-demo.s3-sa-east-1.amazonaws.com/personal-page/square/node-square2.png'
+                },
+                {
+                    img: 'https://portafolio-s3-demo.s3-sa-east-1.amazonaws.com/personal-page/square/ts-square.png'
+                },
+                {
+                    img: 'https://portafolio-s3-demo.s3-sa-east-1.amazonaws.com/personal-page/square/vue-square.png'
+                },
+            ]
+        }
+    }
     
 }
 </script>
@@ -45,6 +73,8 @@ export default {
         border-color: #e3e3e3 ;
         padding-bottom: 15px;
         margin-bottom: 25px;
+        min-height: 76px;
+        box-sizing: content-box;
         .post-img {
             position: absolute;
             width: 76px;
@@ -61,6 +91,21 @@ export default {
                     background-position: 50% 50%;
                 }
             }
+
+            .float-icon {
+                background-color: #47c9e5;
+                padding: 2px 6px;
+                line-height: 1;
+                font-weight: 700;
+                border-radius: 20px;
+                position: absolute;
+                top: 0;
+                right: 0;
+                font-size: 13px;
+                z-index: 500;
+                color: #fff !important;
+                box-shadow: 0px 2px 5px 1px rgba(0,0,0,.2);
+            }
         }
 
         .post-content {
@@ -69,11 +114,17 @@ export default {
             .categories {
                 text-transform: uppercase;
                 margin-bottom: 25px;
+                text-decoration-line: none;
                 a {
                     font-family: "Montserrat";
                     color: #8d8d8d;
                     font-size: 13px;
+                    transition: .3s all ease-in-out;
+                }
 
+                a:hover {
+                    text-decoration-line: none;
+                    color: #47c9e5;
                 }
             }
 
@@ -82,7 +133,20 @@ export default {
                     font-family: "Montserrat";
                     color: #505050;
                     font-weight: 700;
-                    margin-top: 3px
+                    margin-top: 3px;
+                    margin-bottom: 0;
+                    transition: .3s all ease-in-out;
+                }
+
+
+            }
+
+            .title:hover {
+                text-decoration-line: none;
+
+                h6 {
+                    color: #47c9e5;
+                    
                 }
             }
 
