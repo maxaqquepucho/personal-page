@@ -1,10 +1,10 @@
 <template>
   <!-- Navigation -->
-  <nav class="topNav fixed-top" >
+  <nav class="topNav fixed-top " :class="{ isNotHome, watchScroll }" >
     <div class="container">
 
       <div class="header-menu d-flex">
-        <a class="home-icon align-self-center" href="">@MaxAqq</a>
+        <router-link class="home-icon align-self-center" to="/home">@MaxAqq</router-link>
         <button class="" type="button" @click="mostrarMenu = !mostrarMenu"> 
           <i class="fas fa-bars"></i>
         </button>
@@ -15,10 +15,10 @@
         <ul class="">
           
           <li class="nav-item">
-            <a class="" href="">
+            <router-link class="" to="proyectos">
               <i class="fas fa-laptop-code"></i>
               Proyectos
-            </a>
+            </router-link>
           </li>
           <li class="nav-item">
             <a class="" href="">
@@ -33,12 +33,54 @@
   </nav>
 </template>
 <script>
+import { setTimeout } from 'timers';
 export default {
   data() {
     return {
-      mostrarMenu: false
+      mostrarMenu: false,
+      isNotHome: true,
+      watchScroll: false
+    }   
+
+  },
+  methods: {
+    checkIsHome(name) {
+      if (name == 'home') {
+        this.isNotHome = false
+        return
+      }
+
+      this.isNotHome = true
+
+      
+    }
+  },
+  mounted() {
+    this.checkIsHome(this.$route.name)
+
+    window.addEventListener('scroll', (e) => {
+      let scrollPos = window.scrollY
+
+      if (scrollPos < 50) {
+        this.watchScroll = false
+        return
+      }
+
+      this.watchScroll = true
+      
+    })
+
+  },
+  watch: {
+    '$route'(to) {
+      console.log(to)
+      this.checkIsHome(to.name)
+        this.mostrarMenu = false
+
+      
     }
   }
+
     
 }
 </script>
@@ -46,7 +88,7 @@ export default {
   .topNav {
     // background: #40434b;
     // position: relative;
-    
+    transition: all .5s ease;
     .container {
       display: flex;
       flex-direction: row;
@@ -151,13 +193,23 @@ export default {
 
       @media screen and (max-width: 680px) {
 
-        position: relative !important;
-        top: 0px !important;
-        opacity: 1 !important;
+        // position: relative !important;
+        // top: 0px !important;
+        // opacity: 1 !important;
       }
         
     }    
 
     
+  }
+
+  .watchScroll {
+    background: #40434b;
+    box-shadow: 0px 2px 4px -1px rgba(0, 0, 0, 0.2), 
+      0px 4px 5px 0px rgba(0, 0, 0, 0.14), 
+      0px 1px 10px 0px rgba(0, 0, 0, 0.12);
+  }
+  .isNotHome {
+    background: #40434b;
   }
 </style>

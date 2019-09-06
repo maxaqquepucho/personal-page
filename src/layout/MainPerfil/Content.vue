@@ -1,12 +1,18 @@
 <template>
 
-    <div>
+    
         <!-- <header-component /> -->
-
-        <router-view />
-
+        <!-- <transition name="fade" mode="out-in"> -->
+        <transition
+            mode="out-in"
+            name="custom-classes-transition"
+            enter-active-class="animated fadeIn faster"
+            leave-active-class="animated fadeOut faster"
+        >
+            <router-view> </router-view>
+        <!-- </transition> -->
         <!-- Services Section -->
-        <section class="page-section" id="services">
+        <!-- <section class="page-section" id="services">
             <div class="container">
                 <h2 class="text-center mt-0">At Your Service</h2>
                 <hr class="divider my-4">
@@ -41,10 +47,10 @@
                     </div>
                 </div>
             </div>
-        </section>
-
+        </section> -->
+        </transition>
         <!-- About Section -->
-        <section class="slide-section " >
+        <!-- <section class="slide-section " >
 
             <div class="slide">
                 <hooper :settings="hooperSettings" :autoPlay="true"  :playSpeed="3000" style="height: 100%">
@@ -72,26 +78,26 @@
                 </div>
             </div>
             
-        </section>
-    </div>
+        </section> -->
+    
 
 
 </template>
 
 <script>
-import HeaderComponent from "../../components/MainPerfil/Header.vue";
+// import HeaderComponent from "../../components/MainPerfil/Header.vue";
 
 
-import { 
-        Hooper,
-        Slide,
-        Progress as HooperProgress,
-        Pagination as HooperPagination,
-        Navigation as HooperNavigation
-    } from 'hooper';
+// import { 
+//         Hooper,
+//         Slide,
+//         Progress as HooperProgress,
+//         Pagination as HooperPagination,
+//         Navigation as HooperNavigation
+//     } from 'hooper';
 
 //CSS    
-import 'hooper/dist/hooper.css';
+// import 'hooper/dist/hooper.css';
 export default {
     data() {
         return {
@@ -117,65 +123,18 @@ export default {
         };
     },
     components: {
-        HeaderComponent,
-        Hooper,
-        Slide,
-        HooperProgress,
-        HooperPagination,
-        HooperNavigation,
+        // HeaderComponent,
+        // Hooper,
+        // Slide,
+        // HooperProgress,
+        // HooperPagination,
+        // HooperNavigation,
         
     }
 }
 </script>
-<style scoped>
-    .slide-section {
+<style >
+    
 
-        /* height: 33em; */
-
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .slide-section .slide {
-        width: 70%;
-
-    }
-
-    .slide-section .slide .img-slide {
-        width:100%;
-        height: 100%;
-        /* max-height: 500px; */
-        /* opacity:.7; */
-        object-fit: scale-down;
-        /* border-radius: 5px; */
-    }
-
-    .slide-section .slide .bg-img {
-        position: absolute;
-        width:100%;
-        height: 100%;
-        background: rgba(0, 0, 0, 0.356);
-        box-shadow: 1px 1px 1px 1px rgba(0,0,0,0.75);
-        top: 0;
-        
-    }    
-
-    .slide-section .slide h3 {
-        /* font-size: 1.5rem; */
-    }
-
-    .slide-section .slide .img-container {
-        height: 100%;
-        max-height: 500px;
-        border: solid 1px #cccccc87;
-        overflow: hidden;
-        border-radius: 5px;
-    }
-
-    .btn-slide {
-        border-radius: 25px;
-        padding: 5px 20px 5px 20px;
-    }
+    
 </style>

@@ -8,9 +8,9 @@
                 <div>
                     <span>Por Max Aqquepucho Agosto 27, 2019</span>
                 </div>
-                <a href="" class="card-title">
+                <router-link :to="{ name:'tecnologias', params: { 'nombre': card.name } }" class="card-title">
                     <h4> Dart, crear Scripts simples o aplicaciones (App) completas</h4>
-                </a>
+                </router-link>
                 <p>Puede usar Dart para escribir scripts simples o aplicaciones 
                     con todas las funciones. Ya sea que esté creando una aplicación móvil...</p>
             </div>

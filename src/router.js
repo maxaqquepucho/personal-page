@@ -17,7 +17,24 @@ export default new Router({
       children: [
         {
           path: 'home',
+          name: 'home',
           component: () => import('./views/Home.vue')
+        },
+        {
+          path: 'proyectos',
+          name: 'proyectos',
+          component: () => import('./views/Projects.vue')
+        },
+        // {
+        //   path: 'tecnologia',
+        //   redirect: 'tecnologia/javascript',
+        //   name: 'tecnologia'
+        // },
+        {
+         
+          path: 'tecnologia/:nombre',
+          name: 'tecnologias',
+          component: () => import('./views/Tecnologies.vue')
         }
       ]
     },

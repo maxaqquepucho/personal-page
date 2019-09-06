@@ -1,26 +1,28 @@
 <template>
-  <div >
-    <div class="col">
-      <div class="row">
-        <HomeHeader />
-      </div>
-    </div>
-
-    <div class="container-fluid">
+  <!-- <transition name="fade" mode="out-in"> -->
+    <div  >
       <div class="col">
         <div class="row">
-          <div class="col-12  col-sm-12 col-md-12 col-lg-8 col-xl-9">
-            <MasteryContainer />
-          </div>
-          <div class="col-12  col-sm-12 col-md-12 col-lg-4 col-xl-3">
-            <list-posts />
-          </div>
+          <HomeHeader />
         </div>
       </div>
 
-    </div>
+      <div class="container-fluid">
+        <div class="col">
+          <div class="row">
+            <div class="col-12  col-sm-12 col-md-12 col-lg-8 col-xl-9">
+              <MasteryContainer />
+            </div>
+            <div class="col-12  col-sm-12 col-md-12 col-lg-4 col-xl-3">            
+              <list-posts />
+            </div>
+          </div>
+        </div>
 
-  </div>
+      </div>
+
+    </div>
+  <!-- </transition> -->
 </template>
 
 <script>
