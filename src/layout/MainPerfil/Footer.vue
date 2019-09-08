@@ -1,8 +1,8 @@
 <template>
     <!-- Footer -->
-    <footer class="bg-light py-5">        
+    <footer class="footer-container ">        
         <div class="container">
-            <div class="small text-center text-muted">Desarrollado por Max Aqquepucho</div>
+            <div class=" text-center ">Desarrollado por <strong>Max Aqquepucho</strong></div>
         </div>
     </footer>
 </template>
@@ -11,3 +11,24 @@ export default {
     
 }
 </script>
+<style lang="scss" scoped>
+    .footer-container {
+        background-color: #222222;
+        height: 75px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        .container {
+            div {
+                color: white;
+                font-size: 14px;
+                font-weight: 400;
+
+                strong {
+                    font-size: .85rem;
+                }
+            }
+
+        }
+    }
+</style>

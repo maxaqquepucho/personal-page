@@ -1,47 +1,52 @@
 <template>
     <!-- <transition name="fade" mode="out-in"> -->
-    <div class="container">
-        <div class="col pt-4">
-            <div class="row">
-                <div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 ">
-                    <div class="row justify-content-center">
-                        <section class="img-container pr-lg-4 pr-xl-4 mb-4 mb-sm-4 mb-md-4 mb-lg-0">
-                            <img width="100%" :src="getOneTec(tecName).img" alt="">
-                        </section>
+    <div>
+        <div class="container mb-5">
+            <div class="col pt-4">
+                <div class="row">
+                    <div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 ">
+                        <div class="row justify-content-center">
+                            <section class="img-container pr-lg-4 pr-xl-4 mb-4 mb-sm-4 mb-md-4 mb-lg-0">
+                                <img width="100%" :src="getOneTec(tecName).img" alt="">
+                            </section>
+                        </div>
                     </div>
-                </div>
-                <div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 ">
-                    <div class="row">
-                        <section class="tec-container" >
-                            <h3>The proper way to dress up for the</h3>
-                            <div class="header">
-                                <div class="posted">
-                                    <a href="">Por Max Aqquepucho</a>&nbsp;&nbsp;&nbsp;
-                                    <span>Setiembre 05, 2019</span>
+                    <div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 ">
+                        <div class="row">
+                            <section class="tec-container" >
+                                <h3>The proper way to dress up for the</h3>
+                                <div class="header">
+                                    <div class="posted">
+                                        <a href="">Por Max Aqquepucho</a>&nbsp;&nbsp;&nbsp;
+                                        <span>Setiembre 05, 2019</span>
+                                    </div>
+                                    <div class="categories">
+                                        <span>Tecnología</span>,
+                                        <span>Diseño</span>
+                                    </div>
                                 </div>
-                                <div class="categories">
-                                    <span>Tecnología</span>,
-                                    <span>Diseño</span>
-                                </div>
-                            </div>
-                            <hr>
-                            <article class="article">
-                                Quisque dictum eros nisl, a maximus massa accumsan non. Aliquam erat volutpat. Quisque
-                                 at finibus dui. Praesent cursus, dui sed tempus mollis, turpis ex porta lacus, 
-                                 ut egestas justo nibh in nisi. Donec arcu enim, congue in nunc ut, cursus 
-                                 sollicitudin urna. Pellentesque magna purus, accumsan varius mi et, gravida 
-                                 consectetur purus. Etiam mattis molestie aliquet. 
-                            </article>
-                        </section>
+                                <hr>
+                                <article class="article">
+                                    Quisque dictum eros nisl, a maximus massa accumsan non. Aliquam erat volutpat. Quisque
+                                    at finibus dui. Praesent cursus, dui sed tempus mollis, turpis ex porta lacus, 
+                                    ut egestas justo nibh in nisi. Donec arcu enim, congue in nunc ut, cursus 
+                                    sollicitudin urna. Pellentesque magna purus, accumsan varius mi et, gravida 
+                                    consectetur purus. Etiam mattis molestie aliquet. 
+                                </article>
+                            </section>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
+        <FooterTecnology />
     </div>    
     <!-- </transition> -->
 </template>
 <script>
 import { mapGetters } from "vuex";
+
+import FooterTecnology from "@/components/general/FooterTecnology.vue";
 export default {
     data() {
         return {
@@ -66,6 +71,9 @@ export default {
         }
     },
     mounted() {
+    },
+    components: {
+        FooterTecnology
     }
 }
 </script>
