@@ -1,7 +1,8 @@
 <template>
-    <div class="posts-container mt-5">
-        <h5>Proyectos Relevantes</h5>
-        <div class="post-item" v-for="(post, i) in posts" :key="i">
+    <div class="posts-container" >
+        
+        <h5 class="mb-4" :class="{ 'title-dark': dark }">Proyectos Relevantes</h5>
+        <div class="post-item" :class="{ 'border-b-dark': dark }" v-for="(post, i) in posts" :key="i">
             <div class="post-img">
                 <a href="">
                     <div class="img-container">
@@ -11,12 +12,12 @@
                 <div class="float-icon"> 0</div>
             </div>
             <div class="post-content" >
-                <span class="categories">
+                <span class="categories" :class="{'categories-dark': dark}">
                     <a href="">Tecnología</a>&nbsp;
                     <a href="">Diseño</a>
                 </span>
                 <a href="" class="title">
-                    <h6>Proyectos Medic perteniciente a Rimac</h6>
+                    <h6 :class="{ 'post-title-dark': dark }" >Proyectos Medic perteniciente a Rimac</h6>
 
                 </a>
             </div>
@@ -27,42 +28,39 @@
 export default {
     data() {
         return {
-            posts: [
-                {
-                    img: 'https://portafolio-s3-demo.s3-sa-east-1.amazonaws.com/personal-page/square/dart-square.jpg'
-                },
-                {
-                    img: 'https://portafolio-s3-demo.s3-sa-east-1.amazonaws.com/personal-page/square/flutter-square.png'
-                },
-                {
-                    img: 'https://portafolio-s3-demo.s3-sa-east-1.amazonaws.com/personal-page/square/js-square.png'
-                },
-                {
-                    img: 'https://portafolio-s3-demo.s3-sa-east-1.amazonaws.com/personal-page/square/node-square.png'
-                },
-                {
-                    img: 'https://portafolio-s3-demo.s3-sa-east-1.amazonaws.com/personal-page/square/node-square2.png'
-                },
-                {
-                    img: 'https://portafolio-s3-demo.s3-sa-east-1.amazonaws.com/personal-page/square/ts-square.png'
-                },
-                {
-                    img: 'https://portafolio-s3-demo.s3-sa-east-1.amazonaws.com/personal-page/square/vue-square.png'
-                },
-            ]
+            
+            
         }
+    },
+    props: {
+        posts: {
+            type: Array,
+            default: []
+        },
+        dark: {
+            type: Boolean,
+            default: false
+        },
+    },
+    computed: {
+        
     }
     
 }
 </script>
 <style lang="scss" scoped>
+
 .posts-container {
     font-family: "Montserrat";  
+    
+
+    $titulo: #505050; 
+
 
     h5 {
         font-family: "Montserrat";
         font-weight: 700;
-        color: #505050;
+        color: $titulo;
         font-size: 20px;
     }
 
@@ -71,7 +69,7 @@ export default {
         position: relative;
         border-bottom: solid 1px;
         border-color: #e3e3e3 ;
-        padding-bottom: 15px;
+        padding-bottom: 20px;
         margin-bottom: 25px;
         min-height: 76px;
         box-sizing: content-box;
@@ -155,11 +153,37 @@ export default {
         
     }
 
+    .border-b-dark {
+        border-bottom: solid 1px rgba(255,255,255,0.10);
+    }
+
     .post-item:last-child {        
         border-bottom: none;
-
-        padding-bottom: 15px;
+        // border-color: none;
+        padding-bottom: 20px;
         margin-bottom: 0;
     }
+
+
+
+    
 }
+
+.title-dark {
+    color: white !important;
+}
+
+.categories-dark {
+    a {
+        color: white !important;
+
+    }
+}
+
+.post-title-dark {
+    color: white !important;
+}
+
+
+
 </style>

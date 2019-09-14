@@ -4,8 +4,8 @@
     <div class="container">
 
       <div class="header-menu d-flex">
-        <router-link class="home-icon align-self-center" to="/home">@MaxAqq</router-link>
-        <button class="" type="button" @click="mostrarMenu = !mostrarMenu"> 
+        <router-link class="home-icon align-self-center " :class="{ 'isNotHome-btn-humb': isNotHome }"  to="/home">@MaxAqq</router-link>
+        <button class="" :class="{ 'isNotHome-btn-humb': isNotHome }" type="button" @click="mostrarMenu = !mostrarMenu"> 
           <i class="fas fa-bars"></i>
         </button>
         
@@ -15,13 +15,13 @@
         <ul class="">
           
           <li class="nav-item">
-            <router-link class="" to="proyectos">
+            <router-link class="" :class="{ 'isNotHome-item': isNotHome }" to="proyectos">
               <i class="fas fa-laptop-code"></i>
               Proyectos
             </router-link>
           </li>
           <li class="nav-item">
-            <a class="" href="">
+            <a class="" :class="{ 'isNotHome-item': isNotHome }"  href="">
               <i class="far fa-address-card"></i>
               Contacto
             </a>
@@ -61,7 +61,7 @@ export default {
     window.addEventListener('scroll', (e) => {
       let scrollPos = window.scrollY
 
-      if (scrollPos < 50) {
+      if (scrollPos < 1) {
         this.watchScroll = false
         return
       }
@@ -93,13 +93,14 @@ export default {
       display: flex;
       flex-direction: row;
       justify-content: space-between;
-
+      transition: all .5s ease;
 
 
       .header-menu {
         
         .home-icon {
-          color:white;
+          color:rgba(255, 253, 253, 0.795);
+          font-weight: 700;
         }
 
         button {
@@ -115,6 +116,14 @@ export default {
         button:hover {
           color: white;
           border: solid 2px white;
+        }
+
+        .isNotHome-btn-humb {
+          color: #777777;
+        }
+
+        .isNotHome-btn-humb:hover {
+          color: black;
         }
 
         @media screen and (max-width: 680px) {
@@ -134,7 +143,7 @@ export default {
 
       .menu {
         // position: absolute;
-        // right: 0
+        // right: 0;
         ul {
           display: flex;
           flex-direction: row;
@@ -152,13 +161,20 @@ export default {
               display: block;
               font-weight: 700;
               color: rgba(255, 253, 253, 0.795);
+              
               transition: all .5s ease;
               text-decoration-line: none;
             }
 
-            a:hover{
-              color: white;
+            // a:hover{
+            //   color: white;
+            // }
+
+            
+            .isNotHome-item {
+              color:#777777;
             }
+
           }
 
           
@@ -168,6 +184,7 @@ export default {
       @media screen and (max-width: 680px) {
         flex-direction: column;
         overflow: hidden;
+        
         .menu {
           position: absolute;
           top: -100px;
@@ -193,9 +210,9 @@ export default {
 
       @media screen and (max-width: 680px) {
 
-        // position: relative !important;
-        // top: 0px !important;
-        // opacity: 1 !important;
+        position: relative !important;
+        top: 0px !important;
+        opacity: 1 !important;
       }
         
     }    
@@ -205,11 +222,17 @@ export default {
 
   .watchScroll {
     background: #40434b;
-    box-shadow: 0px 2px 4px -1px rgba(0, 0, 0, 0.2), 
-      0px 4px 5px 0px rgba(0, 0, 0, 0.14), 
-      0px 1px 10px 0px rgba(0, 0, 0, 0.12);
+    // box-shadow: 0px 2px 4px -1px rgba(0, 0, 0, 0),
+    //             0px 1px 5px 0px rgba(0, 0, 0, 0.1),
+    //             0px 1px 10px 0px rgba(0, 0, 0, 0.07);
+    border-bottom: solid rgba(0,0,0,0.1) 1px;
   }
   .isNotHome {
-    background: #40434b;
-  }
+    background: rgba(255, 255, 255, 0.97);
+    // box-shadow: 0px 2px 4px -1px rgba(0, 0, 0, 0),
+    //             0px 1px 5px 0px rgba(0, 0, 0, 0.1),
+    //             0px 1px 10px 0px rgba(0, 0, 0, 0.07);
+
+    border-bottom: solid rgba(0,0,0,0.1) 1px;
+   }
 </style>

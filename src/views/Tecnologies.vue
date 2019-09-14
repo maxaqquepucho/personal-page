@@ -2,10 +2,10 @@
     <!-- <transition name="fade" mode="out-in"> -->
     <div>
         <div class="container mb-5">
-            <div class="col pt-4">
+            <div class="col pt-4 mb-5">
                 <div class="row">
                     <div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 ">
-                        <div class="row justify-content-center">
+                        <div class="row justify-content-center justify-content-lg-start">
                             <section class="img-container pr-lg-4 pr-xl-4 mb-4 mb-sm-4 mb-md-4 mb-lg-0">
                                 <img width="100%" :src="getOneTec(tecName).img" alt="">
                             </section>
@@ -33,13 +33,25 @@
                                     sollicitudin urna. Pellentesque magna purus, accumsan varius mi et, gravida 
                                     consectetur purus. Etiam mattis molestie aliquet. 
                                 </article>
+                                <br>
+                                <article class="article">
+                                    Quisque dictum eros nisl, a maximus massa accumsan non. Aliquam erat volutpat. Quisque
+                                    at finibus dui. Praesent cursus, dui sed tempus mollis, turpis ex porta lacus, 
+                                    ut egestas justo nibh in nisi. Donec arcu enim, congue in nunc ut, cursus 
+                                    sollicitudin urna. Pellentesque magna purus, accumsan varius mi et, gravida 
+                                    consectetur purus. Etiam mattis molestie aliquet. 
+                                </article>
+                                
                             </section>
                         </div>
                     </div>
                 </div>
             </div>
+            <hr><br>
+            <RelatedTechs />
         </div>
-        <FooterTecnology />
+        
+        <FooterTecnology :posts="getOneTec(tecName).projects" />
     </div>    
     <!-- </transition> -->
 </template>
@@ -47,6 +59,8 @@
 import { mapGetters } from "vuex";
 
 import FooterTecnology from "@/components/general/FooterTecnology.vue";
+import RelatedTechs from '@/components/general/RelatedTechs.vue'
+
 export default {
     data() {
         return {
@@ -73,7 +87,8 @@ export default {
     mounted() {
     },
     components: {
-        FooterTecnology
+        FooterTecnology,
+        RelatedTechs
     }
 }
 </script>
@@ -89,7 +104,13 @@ export default {
 
     .img-container {
         img {
-            border-radius: 6px;
+            border-radius: 4px;
+        }
+
+        @media screen and (max-width: 991px) {
+            img {
+                border-radius: 0px;
+            }   
         }
     }
 
