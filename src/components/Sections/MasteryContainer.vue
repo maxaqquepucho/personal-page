@@ -124,23 +124,5 @@ export default {
 </script>
 <style lang="scss" >
 
-.masonry-layout {
-    --columns: 1;
-    --gap: 2rem;    
-    $columns: 6;
-  
-    display: grid;
-    grid-template-columns: repeat(var(--columns),1fr);
-    grid-gap: var(--gap);
-  
-    .masonry-item{
-        margin-bottom: var(--gap);
-    }
-  
-    @for $i from 1 through $columns {
-        &.columns-#{$i}{
-            --columns: #{$i};
-        }
-    }
-}
+
 </style>
