@@ -9,9 +9,9 @@
                     <span>Por Max Aqquepucho Agosto 27, 2019</span>
                 </div>
                 <router-link :to="{ name:'tecnologias', params: { 'nombre': card.name } }" class="card-title">
-                    <h4> Dart, crear Scripts simples o aplicaciones (App) completas</h4>
+                    <h4 v-text="card.title"> Dart, crear Scripts simples o aplicaciones (App) completas</h4>
                 </router-link>
-                <p>Puede usar Dart para escribir scripts simples o aplicaciones 
+                <p v-html="lengthParagraph">Puede usar Dart para escribir scripts simples o aplicaciones 
                     con todas las funciones. Ya sea que esté creando una aplicación móvil...</p>
             </div>
             <div class="card-f">
@@ -32,6 +32,16 @@ export default {
         card: {
             type: Object,
             required: true
+        }
+    },
+    computed: {
+        lengthParagraph() {
+            if (this.card.techParagraph.length > 130) {
+                let newParagraph = this.card.techParagraph.substring(0, 130) + '...'
+                return newParagraph
+            } 
+
+            return this.card.techParagraph
         }
     }
 }

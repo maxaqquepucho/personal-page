@@ -105,15 +105,20 @@ export default {
                 github: 'https://www.github.com/maxaqquepucho',
                 linkedin: 'https://www.linkedin.com/in/max-romario-99340218a',
                 instagram: 'https://www.instagram.com/maxaqq'
-            }
+            },
+            posts: [
+                {
+                    img: 'https://portafolio-s3-demo.s3-sa-east-1.amazonaws.com/personal-page/square/dart-square.jpg'
+                },
+                {
+                    img: 'https://portafolio-s3-demo.s3-sa-east-1.amazonaws.com/personal-page/square/flutter-square.png'
+                },
+                {
+                    img: 'https://portafolio-s3-demo.s3-sa-east-1.amazonaws.com/personal-page/square/node-square.png'
+                },
+            ]
         }
-    },
-    props: {
-        posts: {
-            type: Array,
-            default: []
-        }
-    },
+    },    
     components: {
         ListPosts
     }

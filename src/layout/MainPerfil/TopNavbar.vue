@@ -15,7 +15,7 @@
         <ul class="">
           
           <li class="nav-item">
-            <router-link class="" :class="{ 'isNotHome-item': isNotHome }" to="proyectos">
+            <router-link class="" :class="{ 'isNotHome-item': isNotHome }" to="/proyecto">
               <i class="fas fa-laptop-code"></i>
               Proyectos
             </router-link>

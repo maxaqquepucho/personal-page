@@ -9,105 +9,179 @@ export default new Vuex.Store({
       {
         img: 'https://portafolio-s3-demo.s3-sa-east-1.amazonaws.com/personal-page/cards/js.jpg',
         name: 'javascript',
+        title: 'JavaScript, El lenguaje más importante de la web',
+        techParagraph: `JavaScript es un lenguaje de programación que te permite realizar actividades complejas en una página web —  cada vez más una página web hace más cosas que sólo mostrar información estática — como mostrar actualizaciones de contenido en el momento, interactuar con mapas, animaciones gráficas 2D/3D etc. — puedes estar seguro que JavaScript está involucrado. Es la tercera capa del pastel de los estándares en las tecnologías para la web, dos de las cuales son (HTML y CSS).`,
         projects: [
           {
-            img: 'https://portafolio-s3-demo.s3-sa-east-1.amazonaws.com/personal-page/square/dart-square.jpg'
+            img: 'https://portafolio-s3-demo.s3-sa-east-1.amazonaws.com/project-presentation/vue.png',            
+            id: 'id0001'
           },
           {
-            img: 'https://portafolio-s3-demo.s3-sa-east-1.amazonaws.com/personal-page/square/flutter-square.png'
+            img: 'https://portafolio-s3-demo.s3-sa-east-1.amazonaws.com/project-presentation/vue2.png',
+            id: 'id0002'
+          }
+        ]
+      },
+      // {
+      //   img: 'https://portafolio-s3-demo.s3-sa-east-1.amazonaws.com/personal-page/cards/dart.jpg',
+      //   name: 'dart',
+      //   projects: [
+      //     {
+      //       img: 'https://portafolio-s3-demo.s3-sa-east-1.amazonaws.com/personal-page/square/dart-square.jpg'
+      //     },
+      //     {
+      //       img: 'https://portafolio-s3-demo.s3-sa-east-1.amazonaws.com/personal-page/square/flutter-square.png'
+      //     },
+      //     {
+      //       img: 'https://portafolio-s3-demo.s3-sa-east-1.amazonaws.com/personal-page/square/node-square.png'
+      //     },
+      //   ]
+      // },
+      // {
+      //   img: 'https://portafolio-s3-demo.s3-sa-east-1.amazonaws.com/personal-page/cards/electron.jpg',
+      //   name: 'electron',
+      //   projects: [
+      //     {
+      //       img: 'https://portafolio-s3-demo.s3-sa-east-1.amazonaws.com/personal-page/square/dart-square.jpg'
+      //     },
+      //     {
+      //       img: 'https://portafolio-s3-demo.s3-sa-east-1.amazonaws.com/personal-page/square/flutter-square.png'
+      //     },
+      //     {
+      //       img: 'https://portafolio-s3-demo.s3-sa-east-1.amazonaws.com/personal-page/square/node-square.png'
+      //     },
+      //   ]
+      // },
+      // {
+      //   img: 'https://portafolio-s3-demo.s3-sa-east-1.amazonaws.com/personal-page/cards/nodejs.png',
+      //   name: 'nodejs',
+      //   projects: [
+      //     {
+      //       img: 'https://portafolio-s3-demo.s3-sa-east-1.amazonaws.com/personal-page/square/dart-square.jpg'
+      //     },
+      //     {
+      //       img: 'https://portafolio-s3-demo.s3-sa-east-1.amazonaws.com/personal-page/square/flutter-square.png'
+      //     },
+      //     {
+      //       img: 'https://portafolio-s3-demo.s3-sa-east-1.amazonaws.com/personal-page/square/node-square.png'
+      //     },
+      //   ]
+      // },
+      // {
+      //   img: 'https://portafolio-s3-demo.s3-sa-east-1.amazonaws.com/personal-page/cards/php.jpg',
+      //   name: 'php',
+      //   projects: [
+      //     {
+      //       img: 'https://portafolio-s3-demo.s3-sa-east-1.amazonaws.com/personal-page/square/dart-square.jpg'
+      //     },
+      //     {
+      //       img: 'https://portafolio-s3-demo.s3-sa-east-1.amazonaws.com/personal-page/square/flutter-square.png'
+      //     },
+      //     {
+      //       img: 'https://portafolio-s3-demo.s3-sa-east-1.amazonaws.com/personal-page/square/node-square.png'
+      //     },
+      //   ]
+      // },
+      // {
+      //   img: 'https://portafolio-s3-demo.s3-sa-east-1.amazonaws.com/personal-page/cards/ts.jpeg',
+      //   name: 'typescript',
+      //   projects: [
+      //     {
+      //       img: 'https://portafolio-s3-demo.s3-sa-east-1.amazonaws.com/personal-page/square/dart-square.jpg'
+      //     },
+      //     {
+      //       img: 'https://portafolio-s3-demo.s3-sa-east-1.amazonaws.com/personal-page/square/flutter-square.png'
+      //     },
+      //     {
+      //       img: 'https://portafolio-s3-demo.s3-sa-east-1.amazonaws.com/personal-page/square/node-square.png'
+      //     },
+      //   ]
+      // },
+      // {
+      //   img: 'https://portafolio-s3-demo.s3-sa-east-1.amazonaws.com/personal-page/cards/vue.png',
+      //   name: 'vuejs',
+      //   projects: [
+      //     {
+      //       img: 'https://portafolio-s3-demo.s3-sa-east-1.amazonaws.com/personal-page/square/dart-square.jpg'
+      //     },
+      //     {
+      //       img: 'https://portafolio-s3-demo.s3-sa-east-1.amazonaws.com/personal-page/square/flutter-square.png'
+      //     },
+      //     {
+      //       img: 'https://portafolio-s3-demo.s3-sa-east-1.amazonaws.com/personal-page/square/node-square.png'
+      //     },
+      //   ]
+      // }
+    ],
+    projects: [
+      {
+        name: 'owlfiles',
+        id: 'id0001',
+        title: 'Maquetación e implementación de servicios',
+        paragraph: `Durante el inicio del proyecto hey tenido la labor 
+                    de maquetar dichos diseños e implementar servicios,
+                    gracias a la caracteristicas de Vuejs muchos de los componentes trabajan reactivamente 
+                    utilizando el modulo <a href="https://vuex.vuejs.org" target="_blank"> Vuex </a> 
+                    para manejar estado globales en la aplicacion
+                    `,
+        images: [
+          'https://portafolio-s3-demo.s3-sa-east-1.amazonaws.com/owlfiles/1.png',
+          'https://portafolio-s3-demo.s3-sa-east-1.amazonaws.com/owlfiles/2.png',
+          // 'https://portafolio-s3-demo.s3-sa-east-1.amazonaws.com/owlfiles/3.png',
+          'https://portafolio-s3-demo.s3-sa-east-1.amazonaws.com/owlfiles/4.png'
+        ],
+        techs: [
+          {
+            name: 'Vuejs',
+            url: 'https://vuejs.org',
           },
           {
-            img: 'https://portafolio-s3-demo.s3-sa-east-1.amazonaws.com/personal-page/square/node-square.png'
+            name: 'vuetify',
+            url: 'https://vuetifyjs.com'
           },
+          {
+            name: 'Bootstrap',
+            url: 'https://getbootstrap.com'
+          },      
+          {
+            name: 'Nodejs',
+            url: 'https://nodejs.org'
+          },
+          
         ]
       },
       {
-        img: 'https://portafolio-s3-demo.s3-sa-east-1.amazonaws.com/personal-page/cards/dart.jpg',
-        name: 'dart',
-        projects: [
+        name: 'medic',
+        id: 'id0002',
+        title: 'Maquetacion e implementacion de servicios',
+        paragraph: `En este proyecto hey participado realizando la maquetación completa de la 
+                    aplicación posteriormente tambien hey desarrollado algunos servicios para ello. La aplicación esta desarrollada
+                    en <a href="https://vuejs.org/" target="_blank"> Vuejs </a> gracias a este framework progresivo se mantiene una gran experiencia en performas UX.
+                  `,
+        images: [
+          'https://portafolio-s3-demo.s3-sa-east-1.amazonaws.com/medic/1.png',
+          'https://portafolio-s3-demo.s3-sa-east-1.amazonaws.com/medic/2.png',
+          'https://portafolio-s3-demo.s3-sa-east-1.amazonaws.com/medic/3.png',
+          'https://portafolio-s3-demo.s3-sa-east-1.amazonaws.com/medic/4.png',
+          'https://portafolio-s3-demo.s3-sa-east-1.amazonaws.com/medic/5.png',
+          'https://portafolio-s3-demo.s3-sa-east-1.amazonaws.com/medic/6.png',
+        ],
+        techs: [
           {
-            img: 'https://portafolio-s3-demo.s3-sa-east-1.amazonaws.com/personal-page/square/dart-square.jpg'
+            name: 'Vuejs',
+            url: 'https://vuejs.org',
           },
           {
-            img: 'https://portafolio-s3-demo.s3-sa-east-1.amazonaws.com/personal-page/square/flutter-square.png'
+            name: 'vuetify',
+            url: 'https://vuetifyjs.com'
           },
           {
-            img: 'https://portafolio-s3-demo.s3-sa-east-1.amazonaws.com/personal-page/square/node-square.png'
-          },
-        ]
-      },
-      {
-        img: 'https://portafolio-s3-demo.s3-sa-east-1.amazonaws.com/personal-page/cards/electron.jpg',
-        name: 'electron',
-        projects: [
-          {
-            img: 'https://portafolio-s3-demo.s3-sa-east-1.amazonaws.com/personal-page/square/dart-square.jpg'
+            name: 'Bootstrap',
+            url: 'https://getbootstrap.com'
           },
           {
-            img: 'https://portafolio-s3-demo.s3-sa-east-1.amazonaws.com/personal-page/square/flutter-square.png'
-          },
-          {
-            img: 'https://portafolio-s3-demo.s3-sa-east-1.amazonaws.com/personal-page/square/node-square.png'
-          },
-        ]
-      },
-      {
-        img: 'https://portafolio-s3-demo.s3-sa-east-1.amazonaws.com/personal-page/cards/nodejs.png',
-        name: 'nodejs',
-        projects: [
-          {
-            img: 'https://portafolio-s3-demo.s3-sa-east-1.amazonaws.com/personal-page/square/dart-square.jpg'
-          },
-          {
-            img: 'https://portafolio-s3-demo.s3-sa-east-1.amazonaws.com/personal-page/square/flutter-square.png'
-          },
-          {
-            img: 'https://portafolio-s3-demo.s3-sa-east-1.amazonaws.com/personal-page/square/node-square.png'
-          },
-        ]
-      },
-      {
-        img: 'https://portafolio-s3-demo.s3-sa-east-1.amazonaws.com/personal-page/cards/php.jpg',
-        name: 'php',
-        projects: [
-          {
-            img: 'https://portafolio-s3-demo.s3-sa-east-1.amazonaws.com/personal-page/square/dart-square.jpg'
-          },
-          {
-            img: 'https://portafolio-s3-demo.s3-sa-east-1.amazonaws.com/personal-page/square/flutter-square.png'
-          },
-          {
-            img: 'https://portafolio-s3-demo.s3-sa-east-1.amazonaws.com/personal-page/square/node-square.png'
-          },
-        ]
-      },
-      {
-        img: 'https://portafolio-s3-demo.s3-sa-east-1.amazonaws.com/personal-page/cards/ts.jpeg',
-        name: 'typescript',
-        projects: [
-          {
-            img: 'https://portafolio-s3-demo.s3-sa-east-1.amazonaws.com/personal-page/square/dart-square.jpg'
-          },
-          {
-            img: 'https://portafolio-s3-demo.s3-sa-east-1.amazonaws.com/personal-page/square/flutter-square.png'
-          },
-          {
-            img: 'https://portafolio-s3-demo.s3-sa-east-1.amazonaws.com/personal-page/square/node-square.png'
-          },
-        ]
-      },
-      {
-        img: 'https://portafolio-s3-demo.s3-sa-east-1.amazonaws.com/personal-page/cards/vue.png',
-        name: 'vuejs',
-        projects: [
-          {
-            img: 'https://portafolio-s3-demo.s3-sa-east-1.amazonaws.com/personal-page/square/dart-square.jpg'
-          },
-          {
-            img: 'https://portafolio-s3-demo.s3-sa-east-1.amazonaws.com/personal-page/square/flutter-square.png'
-          },
-          {
-            img: 'https://portafolio-s3-demo.s3-sa-east-1.amazonaws.com/personal-page/square/node-square.png'
+            name: 'Nodejs',
+            url: 'https://nodejs.org'
           },
         ]
       }
@@ -124,6 +198,18 @@ export default new Vuex.Store({
       let itemFound = state.tecnologies.filter( item => item.name == param)
       if (itemFound.length != 0 && itemFound.length < 2) {
         return itemFound[0]        
+      }
+
+      return undefined
+    },
+    getProjects(state) {
+      return state.projects
+    },
+    getProject: (state) => (id) => {
+      // Buscando el obj del proyecto y retornando
+      let projectFound = state.projects.filter( project => project.id == id)
+      if (projectFound.length != 0 && projectFound.length < 2) {
+        return projectFound[0]        
       }
 
       return undefined

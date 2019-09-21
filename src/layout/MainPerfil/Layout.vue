@@ -4,6 +4,7 @@
         
         <Content />
 
+        <FooterTecnology  />
         <footer-component />
     </div>
 </template>
@@ -12,11 +13,14 @@ import TopNavbar from "./TopNavbar.vue";
 import Content from "./Content.vue";
 import FooterComponent from './Footer.vue'
 
+import FooterTecnology from "@/components/general/FooterTecnology.vue";
+
 export default {
     components : {
         TopNavbar,
         Content,
-        FooterComponent
+        FooterComponent,
+        FooterTecnology
     }
 
 };

@@ -11,11 +11,11 @@
             <div 
                 class="masonry-column "          
                 :class="{ [`column-${ i+1 }`]: true }" 
-                v-for="(column, i)  in masonryLayoutReact" :key="i" :column="column"
+                v-for="(column, i)  in masonryLayoutReact" :key="i" :column="i"
                 >
 
                 <div class="gallery-item masonry-item" v-for="(card, i) in column" :key="i" :card="card">
-                    <img style="border: solid 1px #ccc" :src="card.img" width="100%" alt="">
+                    <img  :src="card" width="100%" alt="">
 
                 </div>
 
@@ -23,13 +23,48 @@
 
             </div>
         </div>
+        <div class="container project-description mt-3">
+            <div class="col">
+                <div class="row">
+                    <div class=" col-12 col-sm-12 col-md-12 col-lg-6 mb-1 mb-sm-1 mb-md-1 mb-lg-0">
+                        <h4 v-text="getProject(id).title"></h4>
+                        <p class="parrafo" v-html="getProject(id).paragraph" ></p>
+                    </div>
+                    <div class="table-container col-12 col-sm-12 col-md-12 col-lg-6">
+                        <h4 class="mb-3">Tecnologias utilizadas</h4>
+                        <table class="table table-responsive  ">
+                            <thead>
+                                <tr>
+                                    <th class="name" scope="col">Tecnologia</th>
+                                    <th scope="col">Conoce</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr v-for="(tech, i) in getProject(id).techs" :key="i">                                
+                                    <td class="name">{{ tech.name }}</td>
+                                    <td>
+                                        <a :href="tech.url" target="_blank" >{{ tech.url }}</a>
+                                    </td>
+                                </tr>
+                                
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+            </div>          
+        </div>
     </div>
 </template>
 <script>
 import 'viewerjs/dist/viewer.css'
 import Viewer from 'v-viewer'
 import Vue from 'vue'
-  Vue.use(Viewer)
+import { mapGetters } from "vuex";
+
+Vue.use(Viewer)
+
+
 export default {
     components: {
         // Viewer
@@ -63,7 +98,22 @@ export default {
                 },
                
             ],                  
-            columnsCount: 3
+            columnsCount: 3,
+            tecnologias: [
+                {
+                    name: 'JavaScript',
+                    url: 'https://www.javascript.com'
+                },
+                {
+                    name: 'Laravel',
+                    url: 'https://laravel.com/',
+                },
+                {
+                    name: 'MySql',
+                    url: 'https://www.mysql.com/'
+                }
+            ],
+            id: ''
         }
     },
     computed: {
@@ -77,11 +127,11 @@ export default {
                 columnsElements.push(columnObj)
             }
         
-            for(let m = 0; m < Math.ceil(this.cards.length / this.columnsCount); m++){
+            for(let m = 0; m < Math.ceil(this.getProject(this.id).images.length / this.columnsCount); m++){
 
                 for(let n = 0; n < this.columnsCount; n++) {
 
-                    let item = this.cards[ m * this.columnsCount + n]
+                    let item = this.getProject(this.id).images[ m * this.columnsCount + n]
                     
                     if (item) {
                         columnsElements[n].push(item)                        
@@ -91,6 +141,15 @@ export default {
             }           
 
             return columnsElements
+        },
+        ...mapGetters(['getProject'])
+    },
+    created() {
+        this.id = this.$route.params.id
+    },
+    watch: {
+        '$route'(to) {
+            this.id = to.params.id
         }
     },
     mounted() {
@@ -115,9 +174,10 @@ export default {
 </script>
 <style lang="scss" scoped>
     .projects-header {
-        height: 250px;
+        height: 150px;
         background-size: cover;
-        background-image: url(https://cdn.jevelin.shufflehound.com/wp-content/uploads/sites/12/2017/03/Port_2_Background.jpg)
+        background-image: url(https://cdn.jevelin.shufflehound.com/wp-content/uploads/sites/12/2017/03/Port_2_Background.jpg);
+        background-color: rgb(63, 54, 107);
     }
 
     .mansory-img {
@@ -135,6 +195,32 @@ export default {
             transform: scale(1.03);
         }
 
+    }
+
+    .project-description {
+        position: relative;
+        top: -50px;
+
+        h4 {
+            font-weight: 700;
+        }
+
+        .parrafo {
+            font-size: 14px;
+            color: #696969;
+        }
+
+        .table-container {
+            font-size: 14px;
+
+            table {
+
+                @media screen and (min-width: 600px){
+                    display: inline-table;
+                }
+            }
+            
+        }
 
     }
 </style>

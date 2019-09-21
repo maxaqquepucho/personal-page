@@ -1,5 +1,5 @@
 <template>
-    <div class="masonry-layout mt-5 mb-5" :class="{ [`columns-${ columnsCount }`]: true }">
+    <div class="masonry-layout mt-5" :class="{ [`columns-${ columnsCount }`]: true }">
 
         <masonry-column
             class="masonry-column "          
@@ -20,10 +20,10 @@ export default {
                     img: 'https://portafolio-s3-demo.s3-sa-east-1.amazonaws.com/personal-page/cards/js.jpg',
                     name: 'javascript'
                 },
-                {
-                    img: 'https://portafolio-s3-demo.s3-sa-east-1.amazonaws.com/personal-page/cards/dart.jpg',
-                    name: 'dart'
-                },
+                // {
+                //     img: 'https://portafolio-s3-demo.s3-sa-east-1.amazonaws.com/personal-page/cards/dart.jpg',
+                //     name: 'dart'
+                // },
                 {
                     img: 'https://portafolio-s3-demo.s3-sa-east-1.amazonaws.com/personal-page/cards/electron.jpg',
                     name: 'electron'
@@ -48,6 +48,12 @@ export default {
             columnsCount: 2
         }
     },
+    props: {
+        techs: {
+            type: Array,
+            default: []
+        }
+    },
     components: {       
         MasonryColumn
     },
@@ -62,11 +68,11 @@ export default {
                 columnsElements.push(columnObj)
             }
         
-            for(let m = 0; m < Math.ceil(this.cards.length / this.columnsCount); m++){
+            for(let m = 0; m < Math.ceil(this.techs.length / this.columnsCount); m++){
 
                 for(let n = 0; n < this.columnsCount; n++) {
 
-                    let item = this.cards[ m * this.columnsCount + n]
+                    let item = this.techs[ m * this.columnsCount + n]
                     
                     if (item) {
                         columnsElements[n].push(item)                        

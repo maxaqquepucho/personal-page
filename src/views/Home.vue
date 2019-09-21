@@ -11,7 +11,7 @@
         <div class="col">
           <div class="row">
             <div class="col-12  col-sm-12 col-md-12 col-lg-8 col-xl-9">
-              <MasteryContainer />
+              <MasteryContainer :techs="getTec" />
             </div>
             <div class="col-12  col-sm-12 col-md-12 col-lg-4 col-xl-3">            
               <list-posts :posts="posts" class="mt-5" />
@@ -30,6 +30,7 @@
 import MasteryContainer from "@/components/Sections/MasteryContainer.vue";
 import ListPosts from "@/components/general/ListPosts.vue";
 import HomeHeader from "@/components/general/HomeHeader.vue";
+import { mapGetters } from "vuex";
 
 export default { 
   data() {
@@ -59,6 +60,9 @@ export default {
           },
         ]
     }
+  },
+  computed: {
+    ...mapGetters(['getTec'])
   },
   components: {    
     MasteryContainer,

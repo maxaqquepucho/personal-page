@@ -14,7 +14,7 @@
                     <div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 ">
                         <div class="row">
                             <section class="tec-container" >
-                                <h3>The proper way to dress up for the</h3>
+                                <h3 v-text="getOneTec(tecName).title">The proper way to dress up for the</h3>
                                 <div class="header">
                                     <div class="posted">
                                         <a href="">Por Max Aqquepucho</a>&nbsp;&nbsp;&nbsp;
@@ -26,7 +26,7 @@
                                     </div>
                                 </div>
                                 <hr>
-                                <article class="article">
+                                <article class="article" v-html="getOneTec(tecName).techParagraph">
                                     Quisque dictum eros nisl, a maximus massa accumsan non. Aliquam erat volutpat. Quisque
                                     at finibus dui. Praesent cursus, dui sed tempus mollis, turpis ex porta lacus, 
                                     ut egestas justo nibh in nisi. Donec arcu enim, congue in nunc ut, cursus 
@@ -48,17 +48,17 @@
                 </div>
             </div>
             <hr><br>
-            <RelatedTechs />
+            <RelatedTechs :projects="getOneTec(tecName).projects" />
         </div>
         
-        <FooterTecnology :posts="getOneTec(tecName).projects" />
+        
     </div>    
     <!-- </transition> -->
 </template>
 <script>
 import { mapGetters } from "vuex";
 
-import FooterTecnology from "@/components/general/FooterTecnology.vue";
+
 import RelatedTechs from '@/components/general/RelatedTechs.vue'
 
 export default {
@@ -87,7 +87,7 @@ export default {
     mounted() {
     },
     components: {
-        FooterTecnology,
+        
         RelatedTechs
     }
 }

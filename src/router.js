@@ -20,22 +20,27 @@ export default new Router({
           name: 'home',
           component: () => import('./views/Home.vue')
         },
-        {
-          path: 'proyectos',
+        {  // ruta de redireccion
           name: 'proyectos',
+          path: 'proyecto',
+          redirect: 'proyecto/id0001'
+        },
+        {
+          path: 'proyecto/:id',
+          name: 'proyecto',
           component: () => import('./views/Projects.vue')
         },
-        // {
-        //   path: 'tecnologia',
-        //   redirect: 'tecnologia/javascript',
-        //   name: 'tecnologia'
-        // },
-        {
-         
+        { // ruta de redireccion
+          path: 'tecnologia',
+          redirect: 'tecnologia/javascript',
+          name: 'tecnologia'
+        },
+        {         
           path: 'tecnologia/:nombre',
           name: 'tecnologias',
           component: () => import('./views/Tecnologies.vue')
-        }
+        },
+        
       ]
     },
     {
