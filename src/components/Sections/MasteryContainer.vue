@@ -45,7 +45,7 @@ export default {
                     name: 'vuejs'
                 }
             ],                  
-            columnsCount: 2
+            columnsCount: 3
         }
     },
     props: {
@@ -113,7 +113,7 @@ export default {
             if (window.outerWidth < 660 || window.innerWidth < 660) {
                 this.columnsCount = 1
             } else {
-                this.columnsCount = 2
+                this.columnsCount = 3
             }
 
         })
@@ -121,7 +121,7 @@ export default {
         if (window.outerWidth < 660 || window.innerWidth < 660) {
             this.columnsCount = 1
         } else {
-            this.columnsCount = 2
+            this.columnsCount = 3
         }
        
     }

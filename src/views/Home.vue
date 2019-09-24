@@ -10,12 +10,12 @@
       <div class="container-fluid">
         <div class="col">
           <div class="row">
-            <div class="col-12  col-sm-12 col-md-12 col-lg-8 col-xl-9">
+            <div class="col-12  col-sm-12 col-md-12 col-lg-12 col-xl-12">
               <MasteryContainer :techs="getTec" />
             </div>
-            <div class="col-12  col-sm-12 col-md-12 col-lg-4 col-xl-3">            
+            <!-- <div class="col-12  col-sm-12 col-md-12 col-lg-4 col-xl-3">            
               <list-posts :posts="posts" class="mt-5" />
-            </div>
+            </div> -->
           </div>
         </div>
 
