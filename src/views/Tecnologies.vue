@@ -34,13 +34,13 @@
                                     consectetur purus. Etiam mattis molestie aliquet. 
                                 </article>
                                 <br>
-                                <article class="article">
+                                <!-- <article class="article">
                                     Quisque dictum eros nisl, a maximus massa accumsan non. Aliquam erat volutpat. Quisque
                                     at finibus dui. Praesent cursus, dui sed tempus mollis, turpis ex porta lacus, 
                                     ut egestas justo nibh in nisi. Donec arcu enim, congue in nunc ut, cursus 
                                     sollicitudin urna. Pellentesque magna purus, accumsan varius mi et, gravida 
                                     consectetur purus. Etiam mattis molestie aliquet. 
-                                </article>
+                                </article> -->
                                 
                             </section>
                         </div>

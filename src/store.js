@@ -10,7 +10,7 @@ export default new Vuex.Store({
         img: 'https://portafolio-s3-demo.s3-sa-east-1.amazonaws.com/personal-page/cards/js.jpg',
         name: 'javascript',
         title: 'JavaScript, El lenguaje más importante de la web',
-        techParagraph: `Es un lenguaje de programación que te permite realizar actividades complejas en una página web —  cada vez más una página web hace más cosas que sólo mostrar información estática — como mostrar actualizaciones de contenido en el momento, interactuar con mapas, animaciones gráficas 2D/3D etc. — puedes estar seguro que JavaScript está involucrado. Es la tercera capa del pastel de los estándares en las tecnologías para la web, dos de las cuales son (HTML y CSS).`,
+        techParagraph: `Es un lenguaje de programación que te permite realizar actividades complejas en una página web cada vez más una página web hace más cosas que sólo mostrar información estática como mostrar actualizaciones de contenido en el momento, interactuar con mapas, animaciones gráficas 2D/3D etc. Puedes estar seguro que JavaScript está involucrado. Es la tercera capa del pastel de los estándares en las tecnologías para la web, dos de las cuales son (HTML y CSS).`,
         projects: [
           {
             img: 'https://portafolio-s3-demo.s3-sa-east-1.amazonaws.com/project-presentation/vue.png',            
@@ -35,10 +35,26 @@ export default new Vuex.Store({
         ]
       },
       {
-        img: 'https://portafolio-s3-demo.s3-sa-east-1.amazonaws.com/personal-page/cards/ts.jpeg',
-        name: 'typescript2',
-        title: 'TypeScript, Los superpoderes de javascript',
-        techParagraph: 'Es un lenguaje de programación libre y de código abierto desarrollado y mantenido por Microsoft. Es un superconjunto de JavaScript, que esencialmente añade tipos estáticos y objetos basados en clases. Anders Hejlsberg, diseñador de C# y creador de Delphi y Turbo Pascal, ha trabajado en el desarrollo de TypeScript.1​ TypeScript puede ser usado para desarrollar aplicaciones JavaScript que se ejecutarán en el lado del cliente o del servidor (Node.js).',
+        img: 'https://portafolio-s3-demo.s3-sa-east-1.amazonaws.com/personal-page/cards/vue.png',
+        name: 'vuejs',
+        title: 'Vue, el framework progresivo de javascript',
+        techParagraph: 'Vue js es un framework de JavaScript de código abierto para crear interfaces de usuario y aplicaciones de una sola página. Primero fue creado por <a href="https://twitter.com/youyuxi" target="_blank"> Evan You </a>, y ahora lo mantienen él y el resto de los miembros activos del equipo central provenientes de varias compañías como Netlify y Netguru',
+        projects: [
+          {
+            img: 'https://portafolio-s3-demo.s3-sa-east-1.amazonaws.com/project-presentation/vue.png',            
+            id: 'id0001'
+          },
+          {
+            img: 'https://portafolio-s3-demo.s3-sa-east-1.amazonaws.com/project-presentation/vue2.png',
+            id: 'id0002'
+          }
+        ]
+      },
+      {
+        img: 'https://portafolio-s3-demo.s3-sa-east-1.amazonaws.com/personal-page/cards/nodejs-dark.jpg',
+        name: 'nodejs',
+        title: 'Node.js es ejecutar javascript de lado del servidor',
+        techParagraph: 'Node.js es un entorno en tiempo de ejecución multiplataforma, de código abierto, para la capa del servidor basado en el lenguaje de programación ECMAScript, asíncrono, con I/O de datos en una arquitectura orientada a eventos y basado en el motor V8 de Google',
         projects: [
           {
             img: 'https://portafolio-s3-demo.s3-sa-east-1.amazonaws.com/personal-page/all/photo-gallery.jpg',            
@@ -46,6 +62,19 @@ export default new Vuex.Store({
           }
         ]
       },
+      {
+        img: 'https://portafolio-s3-demo.s3-sa-east-1.amazonaws.com/personal-page/cards/laravel.png',
+        name: 'laravel',
+        title: 'Laravel es un framework para desarrollar aplicaciones y servicios web con PHP',
+        techParagraph: 'Laravel es un framework de código abierto para desarrollar aplicaciones y servicios web con PHP 5 y PHP 7. Su filosofía es desarrollar código PHP de forma elegante y simple, evitando el "código espagueti". Fue creado en 2011 y tiene una gran influencia de frameworks como Ruby on Rails, Sinatra y ASP.NET MVC',
+        projects: [
+          {
+            img: 'https://portafolio-s3-demo.s3-sa-east-1.amazonaws.com/personal-page/all/fri-ecommerce-maqueta.jpg',            
+            id: 'id0004'
+          }
+        ]
+      },
+      
       // {
       //   img: 'https://portafolio-s3-demo.s3-sa-east-1.amazonaws.com/personal-page/cards/dart.jpg',
       //   name: 'dart',
@@ -76,21 +105,7 @@ export default new Vuex.Store({
       //     },
       //   ]
       // },
-      // {
-      //   img: 'https://portafolio-s3-demo.s3-sa-east-1.amazonaws.com/personal-page/cards/nodejs.png',
-      //   name: 'nodejs',
-      //   projects: [
-      //     {
-      //       img: 'https://portafolio-s3-demo.s3-sa-east-1.amazonaws.com/personal-page/square/dart-square.jpg'
-      //     },
-      //     {
-      //       img: 'https://portafolio-s3-demo.s3-sa-east-1.amazonaws.com/personal-page/square/flutter-square.png'
-      //     },
-      //     {
-      //       img: 'https://portafolio-s3-demo.s3-sa-east-1.amazonaws.com/personal-page/square/node-square.png'
-      //     },
-      //   ]
-      // },
+      
       // {
       //   img: 'https://portafolio-s3-demo.s3-sa-east-1.amazonaws.com/personal-page/cards/php.jpg',
       //   name: 'php',
@@ -106,21 +121,7 @@ export default new Vuex.Store({
       //     },
       //   ]
       // },      
-      // {
-      //   img: 'https://portafolio-s3-demo.s3-sa-east-1.amazonaws.com/personal-page/cards/vue.png',
-      //   name: 'vuejs',
-      //   projects: [
-      //     {
-      //       img: 'https://portafolio-s3-demo.s3-sa-east-1.amazonaws.com/personal-page/square/dart-square.jpg'
-      //     },
-      //     {
-      //       img: 'https://portafolio-s3-demo.s3-sa-east-1.amazonaws.com/personal-page/square/flutter-square.png'
-      //     },
-      //     {
-      //       img: 'https://portafolio-s3-demo.s3-sa-east-1.amazonaws.com/personal-page/square/node-square.png'
-      //     },
-      //   ]
-      // }
+      
     ],
     projects: [
       {
@@ -227,7 +228,31 @@ export default new Vuex.Store({
             url: 'https://www.getpostman.com'
           },
         ]
-      }
+      },
+      {
+        name: 'Maquetacion de una tienda virtual',
+        id: 'id0004',
+        title: 'Maquetacion de una tienda virtual',
+        paragraph: `En este proyecto hey participado maquetando un nuevo tema que se puede apreciar
+                    en la galeria, dicha maquetacion se realizo utilizando el framework 
+                    <a href="https://laravel.com" target="_blank"> Laravel </a> una tecnologia muy cómoda para trabajar y fácil de adaptarse gracias
+                    a una documentación sencilla de entender y a su gran comunidad de desarrolladores.
+                  `,
+        images: [
+          'https://portafolio-s3-demo.s3-sa-east-1.amazonaws.com/fri-c-financiera/1.png',
+          'https://portafolio-s3-demo.s3-sa-east-1.amazonaws.com/fri-c-financiera/6.png',
+          'https://portafolio-s3-demo.s3-sa-east-1.amazonaws.com/fri-c-financiera/5.png',
+          'https://portafolio-s3-demo.s3-sa-east-1.amazonaws.com/fri-c-financiera/4.png',
+          'https://portafolio-s3-demo.s3-sa-east-1.amazonaws.com/fri-c-financiera/2.png',
+          'https://portafolio-s3-demo.s3-sa-east-1.amazonaws.com/fri-c-financiera/3.png',
+        ],
+        techs: [
+          {
+            name: 'Laravel',
+            url: 'https://laravel.com'
+          }          
+        ]
+      },
     ]
   },
   mutations: {

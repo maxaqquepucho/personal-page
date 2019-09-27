@@ -1,30 +1,37 @@
 <template>
-    <div class="m-card gallery-item masonry-item" >
-        <div class="card-h">
-            <img :src="card.img" alt="imagen del lenguaje dart">
-        </div>
-        <div class="body-container">
-            <div class="card-b">
-                <div>
-                    <span>Por Max Aqquepucho Agosto 27, 2019</span>
-                </div>
-                <router-link :to="{ name:'tecnologias', params: { 'nombre': card.name } }" class="card-title">
-                    <h4 v-text="card.title"> Dart, crear Scripts simples o aplicaciones (App) completas</h4>
-                </router-link>
-                <p v-html="lengthParagraph">Puede usar Dart para escribir scripts simples o aplicaciones 
-                    con todas las funciones. Ya sea que esté creando una aplicación móvil...</p>
-            </div>
-            <div class="card-f">
-                <a href="">Programacion</a>, 
-                <a href="">lenguaje</a>
+    <router-link :to="{ name:'tecnologias', params: { nombre: card.name  } }"
+                    :tag="'div'"
+                 class="m-card gallery-item masonry-item"                  
+                 >
 
-                <div class="btn-container">
-                    <button>Ver más</button>
+        <a href="">
+            <div class="card-h">
+                <img :src="card.img" alt="imagen del lenguaje dart">
+            </div>
+            <div class="body-container">
+                <div class="card-b">
+                    <div>
+                        <span>Por Max Aqquepucho Agosto 27, 2019</span>
+                    </div>
+                    <a class="card-title">
+                        <h4 v-text="card.title"> Dart, crear Scripts simples o aplicaciones (App) completas</h4>
+                    </a>
+                    <p v-html="lengthParagraph">Puede usar Dart para escribir scripts simples o aplicaciones 
+                        con todas las funciones. Ya sea que esté creando una aplicación móvil...</p>
                 </div>
+                <div class="card-f">
+                    <a href="">Programacion</a>, 
+                    <a href="">lenguaje</a>
+
+                    <div class="btn-container">
+                        <button>Ver más</button>
+                    </div>
+                </div>
+
             </div>
 
-        </div>
-    </div>    
+        </a>
+    </router-link>    
 </template>
 <script>
 export default {
@@ -54,7 +61,9 @@ export default {
     // background: #ccc;
     transition: .3s all ease-in-out;
     transform: translateY(0px);
-
+    a {
+        text-decoration: none;
+    }
     .card-h {
         // border-radius: 5px 5px 0 0;
         img {
