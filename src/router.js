@@ -9,6 +9,9 @@ Vue.use(Router)
 export default new Router({
   // mode: 'history',
   base: process.env.BASE_URL,
+  scrollBehavior (to, from, savedPosition) {
+    return { x: 0, y: 0 }
+  },
   routes: [
     {
       path: '/',      
@@ -33,11 +36,11 @@ export default new Router({
         { // ruta de redireccion
           path: 'tecnologia',
           redirect: 'tecnologia/javascript',
-          name: 'tecnologia'
+          name: 'tecnologias'
         },
         {         
           path: 'tecnologia/:nombre',
-          name: 'tecnologias',
+          name: 'tecnologia',
           component: () => import('./views/Tecnologies.vue')
         },
         

@@ -1,5 +1,5 @@
 <template>
-    <router-link :to="{ name:'tecnologias', params: { nombre: card.id || card.name   } }"
+    <router-link :to="{ name: routeObj.name, params: { [ routeObj.paramKey ]: card.id || card.name   } }"
                     :tag="'div'"
                  class="m-card gallery-item masonry-item"                  
                  >
@@ -39,7 +39,12 @@ export default {
         card: {
             type: Object,
             required: true
+        },        
+        routeObj: {
+            type: Object,
+            required: true
         }
+        
     },
     computed: {
         lengthParagraph() {

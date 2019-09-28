@@ -56,7 +56,7 @@ export default new Vuex.Store({
       {
         img: 'https://portafolio-s3-demo.s3-sa-east-1.amazonaws.com/personal-page/cards/nodejs-dark.jpg',
         name: 'nodejs',
-        id: 'node',
+        id: 'nodejs',
         title: 'Node.js es ejecutar javascript de lado del servidor',
         paragraph: 'Node.js es un entorno en tiempo de ejecución multiplataforma, de código abierto, para la capa del servidor basado en el lenguaje de programación ECMAScript, asíncrono, con I/O de datos en una arquitectura orientada a eventos y basado en el motor V8 de Google',
         projects: [

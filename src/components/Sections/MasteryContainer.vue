@@ -4,7 +4,7 @@
         <masonry-column
             class="masonry-column "          
             :class="{ [`column-${ i+1 }`]: true }" 
-            v-for="(column, i)  in masonryLayoutReact" :key="i" :column="column"  />       
+            v-for="(column, i)  in masonryLayoutReact" :key="i" :column="column" :routeObj="routeObj"  />       
         
     </div>
 </template>
@@ -52,6 +52,10 @@ export default {
         techs: {
             type: Array,
             default: []
+        },
+        routeObj: {
+            type: Object,
+            required: true,            
         }
     },
     components: {       

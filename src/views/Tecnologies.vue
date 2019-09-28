@@ -26,7 +26,7 @@
                                     </div>
                                 </div>
                                 <hr>
-                                <article class="article" v-html="getOneTec(tecName).techParagraph">
+                                <article class="article" v-html="getOneTec(tecName).paragraph">
                                     Quisque dictum eros nisl, a maximus massa accumsan non. Aliquam erat volutpat. Quisque
                                     at finibus dui. Praesent cursus, dui sed tempus mollis, turpis ex porta lacus, 
                                     ut egestas justo nibh in nisi. Donec arcu enim, congue in nunc ut, cursus 

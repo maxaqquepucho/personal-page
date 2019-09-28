@@ -13,19 +13,19 @@
         
       <div class="menu" :class="{ mostrarMenu }">
         <ul class="">
-          
+          <li class="nav-item">
+            <router-link class="" :class="{ 'isNotHome-item': isNotHome }"  to="/">
+              <i class="far fa-address-card"></i>
+              Home
+            </router-link>
+          </li>
           <li class="nav-item">
             <router-link class="" :class="{ 'isNotHome-item': isNotHome }" to="/proyecto">
               <i class="fas fa-laptop-code"></i>
               Proyectos
             </router-link>
           </li>
-          <li class="nav-item">
-            <a class="" :class="{ 'isNotHome-item': isNotHome }"  href="">
-              <i class="far fa-address-card"></i>
-              Contacto
-            </a>
-          </li>
+          
           
         </ul>
       </div>
@@ -88,7 +88,7 @@ export default {
   .topNav {
     // background: #40434b;
     // position: relative;
-    transition: all .5s ease;
+    transition: all .17s ease;
     .container {
       display: flex;
       flex-direction: row;

@@ -7,7 +7,7 @@
         <div class="col">
           <div class="row">
             <div class="col-12  col-sm-12 col-md-12 col-lg-12 col-xl-12">
-              <MasteryContainer :techs="getProjects" />
+              <MasteryContainer :routeObj="routeObj" :techs="getProjects" />
             </div>
             <!-- <div class="col-12  col-sm-12 col-md-12 col-lg-4 col-xl-3">            
               <list-posts :posts="posts" class="mt-5" />
@@ -32,7 +32,10 @@ export default {
     },
     data() {
         return {
-            
+            routeObj: {
+              name: 'proyecto',
+              paramKey: 'id'              
+            }
         }
     },
     computed: {        

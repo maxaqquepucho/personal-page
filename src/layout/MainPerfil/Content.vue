@@ -6,8 +6,8 @@
         <transition
             mode="out-in"
             name="custom-classes-transition"
-            enter-active-class="animated fadeIn faster"
-            leave-active-class="animated fadeOut faster"
+            enter-active-class="animated-2ms fadeIn faster"
+            leave-active-class="animated-2ms fadeOut faster"
         >
             <router-view> </router-view>
         <!-- </transition> -->

@@ -1,6 +1,6 @@
 <template>
     <div>
-        <masonry-card v-for="(card, i) in column" :key="i" :card="card" />
+        <masonry-card v-for="(card, i) in column" :key="i" :card="card" :routeObj="routeObj" />
     </div>
 </template>
 <script>
@@ -11,6 +11,10 @@ export default {
         column: {
             type: Array,
             required: true
+        },
+        routeObj: {
+            type: Object,
+            required: true,            
         }
     },
     components: {

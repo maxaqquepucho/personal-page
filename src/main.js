@@ -10,7 +10,7 @@ import './assets/css/fontawesome-free/css/all.css'
 
 //css
 import './assets/css/global.css'
-
+import './assets/css/animate-3.51.css'
 import Prism from 'prismjs';
 
 Prism.highlightAll();
