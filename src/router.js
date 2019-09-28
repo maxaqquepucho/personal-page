@@ -23,12 +23,12 @@ export default new Router({
         {  // ruta de redireccion
           name: 'proyectos',
           path: 'proyecto',
-          redirect: 'proyecto/id0001'
+          component: () => import('./views/Projects.vue')
         },
         {
-          path: 'proyecto/:id',
           name: 'proyecto',
-          component: () => import('./views/Projects.vue')
+          path: 'proyecto/:id',
+          component: () => import('./views/Project.vue')
         },
         { // ruta de redireccion
           path: 'tecnologia',

@@ -1,5 +1,5 @@
 <template>
-    <router-link :to="{ name:'tecnologias', params: { nombre: card.name  } }"
+    <router-link :to="{ name:'tecnologias', params: { nombre: card.id || card.name   } }"
                     :tag="'div'"
                  class="m-card gallery-item masonry-item"                  
                  >
@@ -43,12 +43,12 @@ export default {
     },
     computed: {
         lengthParagraph() {
-            if (this.card.techParagraph.length > 130) {
-                let newParagraph = this.card.techParagraph.substring(0, 130) + '...'
+            if (this.card.paragraph.length > 130) {
+                let newParagraph = this.card.paragraph.substring(0, 130) + '...'
                 return newParagraph
             } 
 
-            return this.card.techParagraph
+            return this.card.paragraph
         }
     }
 }

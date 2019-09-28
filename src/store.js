@@ -9,8 +9,9 @@ export default new Vuex.Store({
       {
         img: 'https://portafolio-s3-demo.s3-sa-east-1.amazonaws.com/personal-page/cards/js.jpg',
         name: 'javascript',
+        id:'javascript',
         title: 'JavaScript, El lenguaje más importante de la web',
-        techParagraph: `Es un lenguaje de programación que te permite realizar actividades complejas en una página web cada vez más una página web hace más cosas que sólo mostrar información estática como mostrar actualizaciones de contenido en el momento, interactuar con mapas, animaciones gráficas 2D/3D etc. Puedes estar seguro que JavaScript está involucrado. Es la tercera capa del pastel de los estándares en las tecnologías para la web, dos de las cuales son (HTML y CSS).`,
+        paragraph: `Es un lenguaje de programación que te permite realizar actividades complejas en una página web cada vez más una página web hace más cosas que sólo mostrar información estática como mostrar actualizaciones de contenido en el momento, interactuar con mapas, animaciones gráficas 2D/3D etc. Puedes estar seguro que JavaScript está involucrado. Es la tercera capa del pastel de los estándares en las tecnologías para la web, dos de las cuales son (HTML y CSS).`,
         projects: [
           {
             img: 'https://portafolio-s3-demo.s3-sa-east-1.amazonaws.com/project-presentation/vue.png',            
@@ -25,8 +26,9 @@ export default new Vuex.Store({
       {
         img: 'https://portafolio-s3-demo.s3-sa-east-1.amazonaws.com/personal-page/cards/ts.jpeg',
         name: 'typescript',
+        id:'typescript',
         title: 'TypeScript, Los superpoderes de javascript',
-        techParagraph: 'Es un lenguaje de programación libre y de código abierto desarrollado y mantenido por Microsoft. Es un superconjunto de JavaScript, que esencialmente añade tipos estáticos y objetos basados en clases. Anders Hejlsberg, diseñador de C# y creador de Delphi y Turbo Pascal, ha trabajado en el desarrollo de TypeScript.1​ TypeScript puede ser usado para desarrollar aplicaciones JavaScript que se ejecutarán en el lado del cliente o del servidor (Node.js).',
+        paragraph: 'Es un lenguaje de programación libre y de código abierto desarrollado y mantenido por Microsoft. Es un superconjunto de JavaScript, que esencialmente añade tipos estáticos y objetos basados en clases. Anders Hejlsberg, diseñador de C# y creador de Delphi y Turbo Pascal, ha trabajado en el desarrollo de TypeScript.1​ TypeScript puede ser usado para desarrollar aplicaciones JavaScript que se ejecutarán en el lado del cliente o del servidor (Node.js).',
         projects: [
           {
             img: 'https://portafolio-s3-demo.s3-sa-east-1.amazonaws.com/personal-page/all/photo-gallery.jpg',            
@@ -37,8 +39,9 @@ export default new Vuex.Store({
       {
         img: 'https://portafolio-s3-demo.s3-sa-east-1.amazonaws.com/personal-page/cards/vue.png',
         name: 'vuejs',
+        id: 'vuejs',
         title: 'Vue, el framework progresivo de javascript',
-        techParagraph: 'Vue js es un framework de JavaScript de código abierto para crear interfaces de usuario y aplicaciones de una sola página. Primero fue creado por <a href="https://twitter.com/youyuxi" target="_blank"> Evan You </a>, y ahora lo mantienen él y el resto de los miembros activos del equipo central provenientes de varias compañías como Netlify y Netguru',
+        paragraph: 'Vue js es un framework de JavaScript de código abierto para crear interfaces de usuario y aplicaciones de una sola página. Primero fue creado por <a href="https://twitter.com/youyuxi" target="_blank"> Evan You </a>, y ahora lo mantienen él y el resto de los miembros activos del equipo central provenientes de varias compañías como Netlify y Netguru',
         projects: [
           {
             img: 'https://portafolio-s3-demo.s3-sa-east-1.amazonaws.com/project-presentation/vue.png',            
@@ -53,8 +56,9 @@ export default new Vuex.Store({
       {
         img: 'https://portafolio-s3-demo.s3-sa-east-1.amazonaws.com/personal-page/cards/nodejs-dark.jpg',
         name: 'nodejs',
+        id: 'node',
         title: 'Node.js es ejecutar javascript de lado del servidor',
-        techParagraph: 'Node.js es un entorno en tiempo de ejecución multiplataforma, de código abierto, para la capa del servidor basado en el lenguaje de programación ECMAScript, asíncrono, con I/O de datos en una arquitectura orientada a eventos y basado en el motor V8 de Google',
+        paragraph: 'Node.js es un entorno en tiempo de ejecución multiplataforma, de código abierto, para la capa del servidor basado en el lenguaje de programación ECMAScript, asíncrono, con I/O de datos en una arquitectura orientada a eventos y basado en el motor V8 de Google',
         projects: [
           {
             img: 'https://portafolio-s3-demo.s3-sa-east-1.amazonaws.com/personal-page/all/photo-gallery.jpg',            
@@ -65,8 +69,9 @@ export default new Vuex.Store({
       {
         img: 'https://portafolio-s3-demo.s3-sa-east-1.amazonaws.com/personal-page/cards/laravel.png',
         name: 'laravel',
+        id: 'laravel',
         title: 'Laravel es un framework para desarrollar aplicaciones y servicios web con PHP',
-        techParagraph: 'Laravel es un framework de código abierto para desarrollar aplicaciones y servicios web con PHP 5 y PHP 7. Su filosofía es desarrollar código PHP de forma elegante y simple, evitando el "código espagueti". Fue creado en 2011 y tiene una gran influencia de frameworks como Ruby on Rails, Sinatra y ASP.NET MVC',
+        paragraph: 'Laravel es un framework de código abierto para desarrollar aplicaciones y servicios web con PHP 5 y PHP 7. Su filosofía es desarrollar código PHP de forma elegante y simple, evitando el "código espagueti". Fue creado en 2011 y tiene una gran influencia de frameworks como Ruby on Rails, Sinatra y ASP.NET MVC',
         projects: [
           {
             img: 'https://portafolio-s3-demo.s3-sa-east-1.amazonaws.com/personal-page/all/fri-ecommerce-maqueta.jpg',            
@@ -127,6 +132,7 @@ export default new Vuex.Store({
       {
         name: 'owlfiles',
         id: 'id0001',
+        img: 'https://portafolio-s3-demo.s3-sa-east-1.amazonaws.com/project-presentation/vue.png',
         title: 'Maquetación e implementación de servicios',
         paragraph: `Durante el inicio del proyecto hey tenido la labor 
                     de maquetar dichos diseños e implementar servicios,
@@ -163,6 +169,7 @@ export default new Vuex.Store({
       {
         name: 'medic',
         id: 'id0002',
+        img: 'https://portafolio-s3-demo.s3-sa-east-1.amazonaws.com/project-presentation/vue2.png',
         title: 'Maquetacion e implementacion de servicios',
         paragraph: `En este proyecto hey participado realizando la maquetación completa de la 
                     aplicación posteriormente tambien hey desarrollado algunos servicios para ello. La aplicación esta desarrollada
@@ -198,6 +205,7 @@ export default new Vuex.Store({
       {
         name: 'API gallery-photo',
         id: 'id0003',
+        img: 'https://portafolio-s3-demo.s3-sa-east-1.amazonaws.com/personal-page/all/photo-gallery.jpg',
         title: 'API de una galeria de fotos',
         paragraph: `En este proyecto hey participado realizando la maquetación completa de la 
                     aplicación posteriormente tambien hey desarrollado algunos servicios para ello. La aplicación esta desarrollada
@@ -232,6 +240,7 @@ export default new Vuex.Store({
       {
         name: 'Maquetacion de una tienda virtual',
         id: 'id0004',
+        img: 'https://portafolio-s3-demo.s3-sa-east-1.amazonaws.com/personal-page/all/fri-ecommerce-maqueta.jpg',
         title: 'Maquetacion de una tienda virtual',
         paragraph: `En este proyecto hey participado maquetando un nuevo tema que se puede apreciar
                     en la galeria, dicha maquetacion se realizo utilizando el framework 
