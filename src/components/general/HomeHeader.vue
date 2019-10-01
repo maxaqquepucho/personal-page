@@ -57,7 +57,7 @@ export default {
 <style lang="scss" scoped>
     .header-container {
         background-color: #353535 !important;
-        background-image: url( https://portafolio-s3-demo.s3-sa-east-1.amazonaws.com/imagenes/coffee-communication-compose-1498964-1561627352957.jpg);
+        background-image: url(https://portafolio-s3-demo.s3-sa-east-1.amazonaws.com/personal-page/coffee-communication-compose-1280-827.jpg);
         position: relative;
         height: 500px;
         width: 100%;

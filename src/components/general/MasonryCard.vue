@@ -80,6 +80,7 @@ export default {
         box-shadow: 0px 15px 45px -9px rgba(0,0,0,.2);
         // border-radius: 0 0 5px 5px;
         transition: .3s all ease-in-out;
+        background-color: white;
         .card-b {
             color: #8d8d8d;
             padding: 19px 12% 19px 12%;
