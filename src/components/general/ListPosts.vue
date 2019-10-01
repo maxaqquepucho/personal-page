@@ -1,10 +1,10 @@
 <template>
     <div class="posts-container" >
         
-        <h5 class="mb-4" :class="{ 'title-dark': dark }">Proyectos Relevantes</h5>
+        <h5 class="mb-4" :class="{ 'title-dark': dark }">Artículos de ejemplo</h5>
         <div class="post-item" :class="{ 'border-b-dark': dark }" v-for="(post, i) in posts" :key="i">
             <div class="post-img">
-                <a href="">
+                <a :href="post.url" target="_blank">
                     <div class="img-container">
                         <img :src="post.img" alt="">
                     </div>
@@ -13,11 +13,11 @@
             </div>
             <div class="post-content" >
                 <span class="categories" :class="{'categories-dark': dark}">
-                    <a href="">Tecnología</a>&nbsp;
-                    <a href="">Diseño</a>
+                    <a v-for="( category ,i) in post.categories" :key="i" >{{ category }} </a>&nbsp;
+                    
                 </span>
-                <a href="" class="title">
-                    <h6 :class="{ 'post-title-dark': dark }" >Proyectos Medic perteniciente a Rimac</h6>
+                <a :href="post.url" target="_blank" class="title">
+                    <h6 :class="{ 'post-title-dark': dark }" >{{ post.title }}</h6>
 
                 </a>
             </div>

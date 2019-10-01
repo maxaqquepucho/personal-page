@@ -8,11 +8,11 @@
                             <h5>Adicional</h5>
                             <article>
                                 <p>
-					                Pellentesque placerat tincidunt urna, vitae feugiat 
-                                    magna vestibulum non. Mauris ut sagittis est. 
-                                    Pellentesque a felis est. Duis in risus metus. Cras felis ante, 
-                                    sodales eget pretium eu, hendrerit at metus. Maecenas aliquam 
-                                    dictum sapien id ornare.
+					                La tecnologia se expresa con cada segunda que vivimos, las personas
+                                    desarrollamos cosas increíbles y malas con ello. Siempre estamos
+                                    resolviendo problemas uno tras otro, sin embargo no siempre tiene que ser asi,
+                                    Elon Musk dijo: no puedes pasar toda la vida resolviendo un problema tras otro, 
+                                    tambien tienes que disfrutar despues de ello.
                                 </p>                                
                             </article>
                             <section class="red-social">
@@ -49,7 +49,7 @@
                         <div class="tres mb-4 mb-sm-4 mb-md-4 mb-lg-0">
                             <h3>Tecnologías</h3>
                             <div class="tec-container">
-                                <a  href="" class="item-tec" v-for="(tec, i) in tecs" :key="i" v-text="tec.name">  </a>
+                                <a   class="item-tec" v-for="(tec, i) in techs" :key="i" v-text="tec.name">  </a>
                             </div>
                         </div>
                     </div>
@@ -65,7 +65,7 @@ import ListPosts from '@/components/general/ListPosts.vue';
 export default {
     data() {
         return {
-            tecs: [
+            techs: [
                 {
                     name: 'Nodejs',
                 },
@@ -108,13 +108,22 @@ export default {
             },
             posts: [
                 {
-                    img: 'https://portafolio-s3-demo.s3-sa-east-1.amazonaws.com/personal-page/square/dart-square.jpg'
+                    img: 'https://portafolio-s3-demo.s3-sa-east-1.amazonaws.com/personal-page/square/flutter-square.png',
+                    title: 'Trabajar código de barras QR con Flutter',
+                    url: 'http://maxaqq.com:7003/#/blogs/articles/201',
+                    categories: ['Tecnología', 'Programación']
                 },
                 {
-                    img: 'https://portafolio-s3-demo.s3-sa-east-1.amazonaws.com/personal-page/square/flutter-square.png'
+                    img: 'https://portafolio-s3-demo.s3-sa-east-1.amazonaws.com/personal-page/square/ts-square2.jpg',
+                    title: 'TypeScript Promise all con N capas',
+                    url: 'http://maxaqq.com:7003/#/blogs/articles/181',
+                    categories: ['Tecnología, programación']
                 },
                 {
-                    img: 'https://portafolio-s3-demo.s3-sa-east-1.amazonaws.com/personal-page/square/node-square.png'
+                    img: 'https://portafolio-s3-demo.s3-sa-east-1.amazonaws.com/personal-page/square/node-square.png',
+                    title: 'Concurrencia y paralelismo',
+                    url: 'http://maxaqq.com:7003/#/blogs/articles/163',
+                    categories: ['Lógica', 'Programación']
                 },
             ]
         }
