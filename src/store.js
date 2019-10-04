@@ -355,12 +355,12 @@ export default new Vuex.Store({
           'https://portafolio-s3-demo.s3-sa-east-1.amazonaws.com/article/article_client/6.png',
           'https://portafolio-s3-demo.s3-sa-east-1.amazonaws.com/article/article_client/7.png',
           'https://portafolio-s3-demo.s3-sa-east-1.amazonaws.com/article/article_client/8.png',
-          'https://portafolio-s3-demo.s3-sa-east-1.amazonaws.com/article/article_client/9.png',
-          'https://portafolio-s3-demo.s3-sa-east-1.amazonaws.com/article/article_client/10.png',
-          'https://portafolio-s3-demo.s3-sa-east-1.amazonaws.com/article/article_client/11.png',
-          'https://portafolio-s3-demo.s3-sa-east-1.amazonaws.com/article/article_client/12.png',
-          'https://portafolio-s3-demo.s3-sa-east-1.amazonaws.com/article/article_client/13.png',
-          'https://portafolio-s3-demo.s3-sa-east-1.amazonaws.com/article/article_client/14.png',          
+          // 'https://portafolio-s3-demo.s3-sa-east-1.amazonaws.com/article/article_client/9.png',
+          // 'https://portafolio-s3-demo.s3-sa-east-1.amazonaws.com/article/article_client/10.png',
+          // 'https://portafolio-s3-demo.s3-sa-east-1.amazonaws.com/article/article_client/11.png',
+          // 'https://portafolio-s3-demo.s3-sa-east-1.amazonaws.com/article/article_client/12.png',
+          // 'https://portafolio-s3-demo.s3-sa-east-1.amazonaws.com/article/article_client/13.png',
+          // 'https://portafolio-s3-demo.s3-sa-east-1.amazonaws.com/article/article_client/14.png',          
         ],
         techs: [
           {
