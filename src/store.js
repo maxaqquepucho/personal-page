@@ -227,9 +227,12 @@ export default new Vuex.Store({
         id: 'id0003',
         img: 'https://portafolio-s3-demo.s3-sa-east-1.amazonaws.com/personal-page/all/photo-gallery.jpg',
         title: 'API de una galeria de fotos',
-        paragraph: `En este proyecto hey participado realizando la maquetación completa de la 
-                    aplicación posteriormente tambien hey desarrollado algunos servicios para ello. La aplicación esta desarrollada
-                    en <a href="https://vuejs.org/" target="_blank"> Vuejs </a> gracias a este framework progresivo se mantiene una gran experiencia en performas UX.
+        paragraph: `Esta API es un proyecto personal con la finalidad de poner a prueba mis 
+                    conocimientos en <a href="http://www.typescriptlang.org/" target="_blank"> Typescript </a>
+                    utilizando <a href="https://nodejs.org" target="_blank">Nodejs</a>
+                     con <a href="https://www.mongodb.com/what-is-mongodb" target="_blank">Mongo DB</a>. <br>
+                    La base de datos esta desplegado en los servicios de <a href="https://www.mongodb.com/cloud/atlas" target="_blank">Mongo Atlas</a>,
+                    el desarrollo de esta API mantiniene buenas practicas de programación utilizando Node js con Typescript.
                   `,
         images: [
           'https://portafolio-s3-demo.s3-sa-east-1.amazonaws.com/photogallery-api/1.png',
@@ -250,6 +253,10 @@ export default new Vuex.Store({
           {
             name: 'Express',
             url: 'https://expressjs.com'
+          },
+          {
+            name: 'MongoDB',
+            url: 'https://www.mongodb.com/what-is-mongodb'
           },
           {
             name: 'Postman',
