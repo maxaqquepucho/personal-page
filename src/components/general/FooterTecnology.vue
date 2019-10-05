@@ -8,7 +8,7 @@
                             <h5>Adicional</h5>
                             <article>
                                 <p>
-					                La tecnologia se expresa con cada segunda que vivimos, las personas
+					                La tecnologia se expresa con cada segundo que vivimos, las personas
                                     desarrollamos cosas increíbles y malas con ello. Siempre estamos
                                     resolviendo problemas uno tras otro, sin embargo no siempre tiene que ser asi,
                                     Elon Musk dijo: no puedes pasar toda la vida resolviendo un problema tras otro, 
