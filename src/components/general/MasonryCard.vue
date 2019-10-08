@@ -20,7 +20,7 @@
                         con todas las funciones. Ya sea que esté creando una aplicación móvil...</p>
                 </div>
                 <div class="card-f">
-                    <a href="">Programacion</a>, 
+                    <a href="">Programación</a>, 
                     <a href="">lenguaje</a>
 
                     <div class="btn-container">

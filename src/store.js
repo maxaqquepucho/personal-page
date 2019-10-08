@@ -154,7 +154,7 @@ export default new Vuex.Store({
         id: 'id0001',
         img: 'https://portafolio-s3-demo.s3-sa-east-1.amazonaws.com/project-presentation/vue.png',
         title: 'Maquetación e implementación de servicios',
-        paragraph: `Durante el inicio del proyecto hey tenido la labor 
+        paragraph: `Durante el inicio del proyecto he tenido la labor 
                     de maquetar dichos diseños e implementar servicios,
                     gracias a la caracteristicas de Vuejs muchos de los componentes trabajan reactivamente 
                     utilizando el modulo <a href="https://vuex.vuejs.org" target="_blank"> Vuex </a> 
@@ -190,9 +190,9 @@ export default new Vuex.Store({
         name: 'medic',
         id: 'id0002',
         img: 'https://portafolio-s3-demo.s3-sa-east-1.amazonaws.com/project-presentation/vue2.png',
-        title: 'Maquetacion e implementacion de servicios',
-        paragraph: `En este proyecto hey participado realizando la maquetación completa de la 
-                    aplicación posteriormente tambien hey desarrollado algunos servicios para ello. La aplicación esta desarrollada
+        title: 'Maquetación e implementación de servicios',
+        paragraph: `En este proyecto he participado realizando la maquetación completa de la 
+                    aplicación posteriormente también he desarrollado algunos servicios para ello. La aplicación esta desarrollada
                     en <a href="https://vuejs.org/" target="_blank"> Vuejs </a> gracias a este framework progresivo se mantiene una gran experiencia en performas UX.
                   `,
         images: [
@@ -226,7 +226,7 @@ export default new Vuex.Store({
         name: 'API gallery-photo',
         id: 'id0003',
         img: 'https://portafolio-s3-demo.s3-sa-east-1.amazonaws.com/personal-page/all/photo-gallery.jpg',
-        title: 'API de una galeria de fotos',
+        title: 'API de una galería de fotos',
         paragraph: `Esta API es un proyecto personal con la finalidad de poner a prueba mis 
                     conocimientos en <a href="http://www.typescriptlang.org/" target="_blank"> Typescript </a>
                     utilizando <a href="https://nodejs.org" target="_blank">Nodejs</a>
@@ -265,12 +265,12 @@ export default new Vuex.Store({
         ]
       },
       {
-        name: 'Maquetacion de una tienda virtual',
+        name: 'Maquetación de una tienda virtual',
         id: 'id0004',
         img: 'https://portafolio-s3-demo.s3-sa-east-1.amazonaws.com/personal-page/all/fri-ecommerce-maqueta.jpg',
-        title: 'Maquetacion de una tienda virtual',
-        paragraph: `En este proyecto hey participado maquetando un nuevo tema que se puede apreciar
-                    en la galeria, dicha maquetacion se realizo utilizando el framework 
+        title: 'Maquetación de una tienda virtual',
+        paragraph: `En este proyecto he participado maquetando un nuevo tema que se puede apreciar
+                    en la galería, dicha maquetación se realizo utilizando el framework 
                     <a href="https://laravel.com" target="_blank"> Laravel </a> una tecnologia muy cómoda para trabajar y fácil de adaptarse gracias
                     a una documentación sencilla de entender y a su gran comunidad de desarrolladores.
                   `,
