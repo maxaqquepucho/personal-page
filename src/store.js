@@ -32,20 +32,20 @@ export default new Vuex.Store({
         ]
       },
       {
-        img: 'https://portafolio-s3-demo.s3-sa-east-1.amazonaws.com/personal-page/cards/ts.jpeg',
-        name: 'typescript',
-        id:'typescript',
-        title: 'TypeScript, Los superpoderes de javascript',
-        paragraph: 'Es un lenguaje de programación libre y de código abierto desarrollado y mantenido por Microsoft. Es un superconjunto de JavaScript, que esencialmente añade tipos estáticos y objetos basados en clases. Anders Hejlsberg, diseñador de C# y creador de Delphi y Turbo Pascal, ha trabajado en el desarrollo de TypeScript.1​ TypeScript puede ser usado para desarrollar aplicaciones JavaScript que se ejecutarán en el lado del cliente o del servidor (Node.js).',
+        img: 'https://portafolio-s3-demo.s3-sa-east-1.amazonaws.com/personal-page/cards/react-js.png',
+        name: 'react-js',
+        id: 'react-js',
+        title: 'React, Una biblioteca de JavaScript para construir interfaces de usuario',
+        paragraph: 'React es una biblioteca Javascript de código abierto diseñada para crear interfaces de usuario con el objetivo de facilitar el desarrollo de aplicaciones en una sola página. Es mantenido por Facebook y la comunidad de software libre, han participado en el proyecto más de mil desarrolladores diferentes',
         projects: [
           {
-            img: 'https://portafolio-s3-demo.s3-sa-east-1.amazonaws.com/personal-page/all/photo-gallery.jpg',            
-            id: 'id0003'
+            img: 'https://portafolio-s3-demo.s3-sa-east-1.amazonaws.com/user-search-react/1.png',            
+            id: 'id0008'
           }
         ]
       },
       {
-        img: 'https://portafolio-s3-demo.s3-sa-east-1.amazonaws.com/personal-page/cards/vue.png',
+        img: 'https://portafolio-s3-demo.s3-sa-east-1.amazonaws.com/personal-page/cards/vue-js-green.jpeg',
         name: 'vuejs',
         id: 'vuejs',
         title: 'Vue, el framework progresivo de javascript',
@@ -70,6 +70,20 @@ export default new Vuex.Store({
         ]
       },
       {
+        img: 'https://portafolio-s3-demo.s3-sa-east-1.amazonaws.com/personal-page/cards/ts.jpeg',
+        name: 'typescript',
+        id:'typescript',
+        title: 'TypeScript, Los superpoderes de javascript',
+        paragraph: 'Es un lenguaje de programación libre y de código abierto desarrollado y mantenido por Microsoft. Es un superconjunto de JavaScript, que esencialmente añade tipos estáticos y objetos basados en clases. Anders Hejlsberg, diseñador de C# y creador de Delphi y Turbo Pascal, ha trabajado en el desarrollo de TypeScript.1​ TypeScript puede ser usado para desarrollar aplicaciones JavaScript que se ejecutarán en el lado del cliente o del servidor (Node.js).',
+        projects: [
+          {
+            img: 'https://portafolio-s3-demo.s3-sa-east-1.amazonaws.com/personal-page/all/photo-gallery.jpg',            
+            id: 'id0003'
+          }
+        ]
+      },
+      
+      {
         img: 'https://portafolio-s3-demo.s3-sa-east-1.amazonaws.com/personal-page/cards/nodejs-dark.jpg',
         name: 'nodejs',
         id: 'nodejs',
@@ -85,7 +99,7 @@ export default new Vuex.Store({
             id: 'id0007'
           }
         ]
-      },
+      }, 
       {
         img: 'https://portafolio-s3-demo.s3-sa-east-1.amazonaws.com/personal-page/cards/laravel.png',
         name: 'laravel',
@@ -428,7 +442,38 @@ export default new Vuex.Store({
             url: 'https://aws.amazon.com/s3/'
           },      
         ]
-      }
+      },
+      // user search react
+      {
+        name: 'Buscador de usuarios React-typescript',
+        id: 'id0008',
+        img: 'https://portafolio-s3-demo.s3-sa-east-1.amazonaws.com/user-search-react/1.png',
+        title: 'Buscador de usuarios React-typescript',
+        paragraph: `Utilizar Typescript con React puede ayudar mucho a programar código limpio. 
+                    Este pequeño proyecto es desarrollado con la intención de resolver el tipado estático
+                    que no trae javascript, donde el programador puede crear código estructurado utilizando interfaces y 
+                    así crear buenas prácticas hacia otros desarrolladores.
+                  `,
+        images: [
+          'https://portafolio-s3-demo.s3-sa-east-1.amazonaws.com/user-search-react/3.png',
+          'https://portafolio-s3-demo.s3-sa-east-1.amazonaws.com/user-search-react/1.png',
+          'https://portafolio-s3-demo.s3-sa-east-1.amazonaws.com/user-search-react/2.png',
+        ],
+        techs: [
+          {
+            name: 'React js',
+            url: 'https://es.reactjs.org/'
+          },
+          {
+            name: 'TypeScript',
+            url: 'https://www.typescriptlang.org/',
+          },                    
+          {
+            name: 'Nodejs',
+            url: 'https://nodejs.org'
+          },
+        ]
+      },
     ]
   },
   mutations: {
