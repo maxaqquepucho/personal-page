@@ -7,7 +7,7 @@
                         <img src="https://portafolio-s3-demo.s3-sa-east-1.amazonaws.com/imagenes/perfil-square.jpg" alt="Braden Hamm">
                     </a>
                 </span>                
-                <h4 class="user-name">Max Aqquepucho</h4>
+                <h1 class="user-name">Max Aqquepucho</h1>
                 <p class="user-description">
                     Soy una persona que le gusta la tecnología y con una gran curiosidad de aprender nuevas formas
 					de desarrollar software, asi brindar una gran experiencia al usuario y contribuir con la comunidad 
