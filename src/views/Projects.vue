@@ -45,7 +45,11 @@ export default {
         
     },
     mounted() {
-        
+        analytics.track('Projects page mounted', {
+          title: 'Snow Fall',
+          subtitle: 'The Avalanche at Tunnel Creek',
+          author: 'John Branch'
+        });
     }
 }
 </script>

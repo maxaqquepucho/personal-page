@@ -72,6 +72,13 @@ export default {
     MasteryContainer,
     ListPosts,
     HomeHeader
+  },
+  mounted() {
+    analytics.track('Home page mounted', {
+      title: 'Snow Fall',
+      subtitle: 'The Avalanche at Tunnel Creek',
+      author: 'John Branch'
+    });
   }
 }
 </script>
