@@ -18,7 +18,11 @@
     "strict": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
-    "noFallthroughCasesInSwitch": true
+    "noFallthroughCasesInSwitch": true,
+    "baseUrl": "src", // Define el directorio base
+    "paths": {
+      "@/*": ["./*"] // Crea el alias '@' para apuntar a la carpeta 'src'
+    }
   },
   "include": ["src"]
 }
