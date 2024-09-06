@@ -10,7 +10,7 @@
                 <h1 class="user-name">Max Aqquepucho</h1>
                 <p class="user-description">
                     Soy una persona que le gusta la tecnología y con una gran curiosidad de aprender nuevas formas
-					de desarrollar software, asi brindar una gran experiencia al usuario y contribuir con la comunidad 
+					de desarrollar software, así brindar una gran experiencia al usuario y contribuir con la comunidad 
 					<span style="font-weight: bold" >Open source</span>
                 </p>
                 <div class="red-social">
