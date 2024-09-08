@@ -6,8 +6,8 @@ import './style.scss'
 
 const Header = () => {
   return (
-    <header className=" backdrop-blur-md fixed top-0 z-10 flex items-center justify-center w-full mx-auto mt-3">
-      <nav className="bg-slate-800 flex px-3 text-sm font-medium rounded-full text-gray-600 dark:text-gray-200 justify-center items-center">
+    <header className="  fixed top-0 z-10 flex items-center justify-center w-full mx-auto mt-3">
+      <nav className="bg-slate-800 backdrop-blur-md flex px-3 text-sm font-medium rounded-full text-gray-600 dark:text-gray-200 justify-center items-center">
         <a className="header-nav-item" href="#Experiencia">
           Experiencia
         </a>

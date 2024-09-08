@@ -1,1 +1,88 @@
+.profile-photo {
+  @apply p-10 w-60;
 
+  img {
+    @apply rounded-full;
+  }
+
+  // background-image: ;
+  // height: 50%;
+}
+
+.profile-border {
+  --border-radius: 12px;
+  --border-size: 1px;
+  --padding: 1px;
+  --border-bg: conic-gradient(
+    from 180deg at 50% 50%,
+    #e92a67 0deg,
+    #a853ba 112.5deg,
+    #2a8af6 228.75deg,
+    rgba(42, 138, 246, 0) 360deg
+  );
+  position: relative;
+  overflow: hidden;
+  font-size: 2rem;
+  // padding: calc(var(--padding) + var(--border-size));
+  border-radius: var(--border-radius);
+  display: inline-block;
+  z-index: 0;
+  backface-visibility: hidden;
+  perspective: 1000;
+  transform: translateZ(0);
+
+  i {
+    content: '';
+    opacity: 1;
+    position: absolute;
+    top: var(--border-size);
+    right: var(--border-size);
+    bottom: var(--border-size);
+    left: var(--border-size);
+    padding: var(--border-size);
+    -webkit-mask:
+      linear-gradient(#fff 0 0) content-box,
+      linear-gradient(#fff 0 0);
+    mask:
+      linear-gradient(#fff 0 0) content-box,
+      linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    z-index: -1;
+    border-radius: calc(var(--border-radius) + var(--border-size));
+
+    &::before {
+      content: '';
+      display: block;
+      background: var(--border-bg);
+      box-shadow: 0 0 40px 20px --var(--border-bg);
+      width: calc(100% * 1.41421356237);
+      padding-bottom: calc(100% * 1.41421356237);
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      border-radius: 100%;
+      z-index: -2;
+      animation: border_spin 5s linear infinite;
+    }
+  }
+}
+
+.about-me-home {
+  background: rgb(0, 6, 24);
+  background: linear-gradient(
+    90deg,
+    rgba(0, 6, 24, 1) 0%,
+    rgba(14, 2, 7, 1) 100%
+  );
+}
+
+@keyframes border_spin {
+  0% {
+    transform: translate(-50%, -50%) rotate(1turn);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(0);
+  }
+}
