@@ -1,9 +1,16 @@
-import { useState } from 'react'
+//COMPONENTS
+import Header from '@/components/Header/index.tsx'
+import Home from '@/components/Home'
 
 function App() {
-  const [count, setCount] = useState(0)
-
-  return <></>
+  return (
+    <>
+      <div className="h-screen home-body-bg">
+        <Header />
+        <Home />
+      </div>
+    </>
+  )
 }
 
 export default App
