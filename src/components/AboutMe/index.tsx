@@ -12,16 +12,18 @@ const AboutMe: React.FC = () => {
         <FontAwesomeIcon className="mr-4" icon={faUserCheck} />
         <h4>Sobre mí</h4>
       </section>
-
-      <section className="flex flex-col items-center justify-center gap-8 text-gray-700 dark:text-gray-300 md:flex-row">
+      {/* light:text-gray-700 */}
+      <section className="flex flex-col items-center justify-center gap-8  text-gray-300 md:flex-row">
+        {/* light:bg-black/20 */}
+        {/* light:ring-black/70 */}
         <img
-          className="order-1 object-cover w-64 h-full p-1 md:order-2 rotate-3 lg:p-2 lg:w-64 aspect-square rounded-2xl bg-black/20 dark:bg-blue-800/5 ring-1 ring-black/70 dark:ring-white/20 "
+          className="order-1 object-cover w-64 h-full p-1 md:order-2 rotate-3 lg:p-2 lg:w-64 aspect-square rounded-2xl  bg-blue-800/5 ring-1 ring-white/20"
           width={'20%'}
           src={ImageAbautMe}
           alt=""
         />
 
-        <div className="text-gray-300 [&>p]:mb-4 [&>p>strong]:text-yellow-500 dark:[&>p>strong]:text-blue-400 [&>p>strong]:font-normal [&>p>strong]:font-mono text-pretty order-2 ">
+        <div className="text-gray-300 [&>p]:mb-4 [&>p>strong]:text-blue-400 [&>p>strong]:font-normal [&>p>strong]:font-mono text-pretty order-2 ">
           <p>
             Me llamo Max Aqquepucho. Empecé a conocer la programación cuando
             tenía 14 años por curiosidad. Años después, me di cuenta de que era

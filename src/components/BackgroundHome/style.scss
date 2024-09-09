@@ -72,10 +72,10 @@
     mix-blend-mode: normal;
 
     width: 25%;
-    height: 900px;
+    height: 850px;
     left: -12.5%;
     // top: calc(50% - 900px / 2 + 151px);
-    bottom: 24px;
+    bottom: 35px;
     opacity: 0.2;
     background: linear-gradient(180deg, #77b8ff, rgba(42, 138, 246, 0.4));
     transform: rotate(-15deg);
@@ -118,10 +118,10 @@
     mix-blend-mode: normal;
     z-index: 200;
     width: 25%;
-    height: 900px;
+    height: 850px;
     right: -12.5%;
     // top: calc(50% - 900px / 2 + 151px);
-    bottom: 24px;
+    bottom: 35px;
     background-image: linear-gradient(
       180deg,
       rgba(236, 151, 207, 0.4),

@@ -53,10 +53,11 @@ const Home: React.FC = () => {
 
     setTimeout(() => {
       if (Object.keys(refToHash).includes(path || '')) {
-        const ref = refToHash[path as keyof typeof refToHash]
-        scrollTo(ref)
+        // const ref = refToHash[path as keyof typeof refToHash]
+        // scrollTo(ref)
       } else {
         window.scrollTo({ top: 0, behavior: 'smooth' })
+        // window.history.replaceState(null, )
       }
     }, 800)
   }, [])
@@ -73,7 +74,7 @@ const Home: React.FC = () => {
                 <h1 className="text-gray-200  text-4xl sm:text-5xl font-bold">
                   Hola, Soy Max <br /> Aqquepucho
                 </h1>
-                <p className="text-xl mt-6 dark:text-gray-300 [&>strong]:text-blue-400">
+                <p className="text-xl mt-6 text-gray-300 [&>strong]:text-blue-400">
                   +6 años de experiencia como{' '}
                   <strong>
                     Desarrollador de Software y apasionado por la tecnología.
@@ -85,7 +86,8 @@ const Home: React.FC = () => {
               <div className="mb-6 md:mb-0 flex justify-center md:justify-end">
                 <div className="profile-photo profile-border">
                   <i></i>
-                  <div className="z-[-1] pointer-events-none absolute left-1/2 top-1/2 h-[261px] w-[261px] -translate-x-1/2 -translate-y-1/2 bg-gradient-to-b from-[#000000] to-[#48279c] opacity-5 mix-blend-normal blur-[30px] dark:opacity-[0.15]"></div>
+                  {/* light:opacity-5 */}
+                  <div className="z-[-1] pointer-events-none absolute left-1/2 top-1/2 h-[261px] w-[261px] -translate-x-1/2 -translate-y-1/2 bg-gradient-to-b from-[#000000] to-[#48279c]  mix-blend-normal blur-[30px] opacity-[0.15]"></div>
                   <img
                     className="z-20"
                     // width={'50%'}
