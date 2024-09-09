@@ -8,7 +8,7 @@ import ImageAbautMe from '@/assets/img/max-footer-picture-square.jpeg'
 const AboutMe: React.FC = () => {
   return (
     <div className="max-w-5xl m-auto py-20">
-      <section className="flex items-center text-3xl font-semibold text-gray-200 pb-10">
+      <section className="flex items-center text-3xl font-semibold text-gray-200 pb-16">
         <FontAwesomeIcon className="mr-4" icon={faUserCheck} />
         <h4>Sobre mí</h4>
       </section>
@@ -26,19 +26,18 @@ const AboutMe: React.FC = () => {
             Me llamo Max Aqquepucho. Empecé a conocer la programación cuando
             tenía 14 años por curiosidad. Años después, me di cuenta de que era
             lo mío. Actualmente, soy <strong>Desarrollador de Software</strong>{' '}
-            y mi industria favorita.         
+            con una pasión insaciable de generar impacto.
           </p>
           <p>
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-            Exercitationem nemo ea at quae est officia rem recusandae fugit
-            optio iste. Ex repellendus, fugiat alias quasi soluta nulla fugit
-            nam placeat?
+            Tengo algunos hobbies, como tocar el piano y la guitarra. Pertenecí
+            a una banda de <strong> música latinoamericana,</strong> donde
+            conocí a grandes artistas y tuve la oportunidad de compartir el
+            escenario.
           </p>
           <p>
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-            Exercitationem nemo ea at quae est officia rem recusandae fugit
-            optio iste. Ex repellendus, fugiat alias quasi soluta nulla fugit
-            nam placeat?
+            Una pasión que descubrí hace poco es <strong>viajar en moto</strong>{' '}
+            (en pandemia 😆). En estos últimos años, he recorrido gran parte de
+            mi país y he tenido la oportunidad de conocer lugares increíbles.
           </p>
         </div>
       </section>
