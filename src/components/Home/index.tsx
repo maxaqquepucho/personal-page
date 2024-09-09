@@ -23,7 +23,7 @@ const experienceList = [
   {
     title: 'Full Stack Developer (freelance)',
     company: 'Softdynamic',
-    date: '2019 julio - 2019 Octubre ',
+    date: '2019 Julio - 2019 Octubre ',
     description:
       'Ejecuté un proyecto para administrar los seguros de RIMAC, utilizando Vue.js con Vuex en el front-end y desarrollando una API en Laravel con una base de datos en PostgreSQL en el back-end.',
   },

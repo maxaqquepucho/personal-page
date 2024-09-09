@@ -12,7 +12,7 @@ interface ExperienceItemProps {
 const ExperienceItem: React.FC<ExperienceItemProps> = ({ item }) => {
   return (
     <div className="relative mx-12 pb-12 grid before:absolute before:left-[-35px] before:block before:h-full before:border-l-2 before:border-black/20 dark:before:border-white/15 before:content-[''] md:grid-cols-5 md:gap-10 md:space-x-4">
-      <div className='relative pb-12 col-span-2'>
+      <div className="relative pb-12 col-span-2">
         <div className="sticky top-0">
           {' '}
           <span className="text-blue-400 -left-[42px] absolute rounded-full text-5xl">

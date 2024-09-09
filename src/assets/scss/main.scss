@@ -1,9 +1,6 @@
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-
 
 .home-body-bg {
   --fd-background: 0 0% 3.9%;
@@ -11,6 +8,5 @@
 }
 
 html {
-  font-family: "Onest Variable", system-ui, sans-serif;
-
+  font-family: 'Onest Variable', system-ui, sans-serif;
 }
