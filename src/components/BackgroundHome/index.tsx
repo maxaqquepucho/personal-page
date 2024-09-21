@@ -9,13 +9,12 @@ import './style.scss'
 const BackgroundHome: React.FC = () => {
   // Implement your component logic here
 
-
   return (
     // JSX code for your component's UI goes here
     <>
-    {/* light: opacity-50  */}
+      {/* light: opacity-50  */}
       <span className="sidebar__right-lights opacity-100"></span>
-    {/* light: opacity-50  */}
+      {/* light: opacity-50  */}
 
       <span className="sidebar__left_lights opacity-100"></span>
 
@@ -39,5 +38,4 @@ const BackgroundHome: React.FC = () => {
   )
 }
 
-
-export default BackgroundHome;
+export default BackgroundHome

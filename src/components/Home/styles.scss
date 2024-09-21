@@ -1,5 +1,5 @@
 .profile-photo {
-  @apply p-8 md:p-10 w-48 md:w-60;
+  @apply p-8 md:p-10 w-48 md:w-60 max-h-60;
 
   img {
     @apply rounded-full;

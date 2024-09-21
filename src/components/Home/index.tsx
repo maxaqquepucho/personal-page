@@ -6,6 +6,7 @@ import BackgroundHome from '@/components/BackgroundHome'
 import ExperienceItem from './components/ExperienceItem'
 import AboutMe from '@/components/AboutMe'
 import Header from '@/components/Header/index.tsx'
+import SocialNetworks from '../SocialNetworks'
 
 import { faBriefcase } from '@fortawesome/free-solid-svg-icons'
 
@@ -82,6 +83,7 @@ const Home: React.FC = () => {
                   Tengo una curiosidad insaciable por crear, aprender y sobre
                   todo contribuir a nuestro planeta con <strong>Tech.</strong>
                 </p>
+                <SocialNetworks />
               </div>
               <div className="mb-6 md:mb-0 flex justify-center md:justify-end">
                 <div className="profile-photo profile-border">

@@ -7,7 +7,6 @@
   transition: perspective 3s ease 0s;
 }
 
-
 .bg-rotate-home {
   transform: rotateX(75deg);
   position: absolute;
@@ -15,7 +14,6 @@
   bottom: 0;
   left: 0;
   right: 0;
-
 
   .dark-bg-home {
     --right: #4c2638;
