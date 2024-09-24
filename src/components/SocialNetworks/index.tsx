@@ -8,6 +8,7 @@ import {
 
 import './styles.scss'
 
+
 export default function SocialNetworks() {
   const socialNetworks = [
     {
