@@ -36,6 +36,7 @@ const Home: React.FC = () => {
 
   const listItems = experienceList.map((experienceItem, index) => (
     <li key={index}>
+      
       <ExperienceItem item={experienceItem} />
     </li>
   ))

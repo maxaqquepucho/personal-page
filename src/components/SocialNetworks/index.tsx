@@ -5,7 +5,6 @@ import {
   faInstagram,
   faXTwitter,
 } from '@fortawesome/free-brands-svg-icons'
-
 import './styles.scss'
 
 
