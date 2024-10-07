@@ -72,6 +72,7 @@ const Home: React.FC = () => {
           <BackgroundHome />
           <div className="px-4 relative  md:pt-28  backdrop-blur-sm">
             <section className="text-gray-300 flex flex-col-reverse md:flex-row justify-between m-auto max-w-5xl  pt-20">
+              
               <div className="text-center md:text-left flex-grow max-w-2xl ">
                 <h1 className="text-gray-200  text-4xl sm:text-5xl font-bold">
                   Hola, Soy Max <br /> Aqquepucho
@@ -83,6 +84,7 @@ const Home: React.FC = () => {
                   </strong>{' '}
                   Tengo una curiosidad insaciable por crear, aprender y sobre
                   todo contribuir a nuestro planeta con <strong>Tech.</strong>
+               
                 </p>
                 <SocialNetworks />
               </div>
@@ -102,6 +104,7 @@ const Home: React.FC = () => {
             </section>
             <section ref={experienceRef} className="max-w-5xl m-auto pt-20">
               <div className="flex items-center text-3xl font-semibold text-gray-200">
+                
                 <FontAwesomeIcon className="mr-4" icon={faBriefcase} />
                 <h3>Experiencia laboral</h3>
               </div>
