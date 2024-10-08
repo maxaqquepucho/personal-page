@@ -69,7 +69,9 @@ const Home: React.FC = () => {
       <Header scrollExecution={scrollTo} refs={{ experienceRef, aboutMeRef }} />
       <main>
         <section className="relative overflow-hidden h-full">
+          
           <BackgroundHome />
+
           <div className="px-4 relative  md:pt-28  backdrop-blur-sm">
             <section className="text-gray-300 flex flex-col-reverse md:flex-row justify-between m-auto max-w-5xl  pt-20">
               
