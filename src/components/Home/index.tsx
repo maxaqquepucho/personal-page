@@ -42,7 +42,9 @@ const Home: React.FC = () => {
   ))
 
   const scrollTo = (ref: React.RefObject<HTMLDivElement>) => {
+
     ref.current?.scrollIntoView({ behavior: 'smooth' })
+    
   }
 
   useEffect(() => {
