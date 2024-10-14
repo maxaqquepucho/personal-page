@@ -3,8 +3,10 @@ import React, { useRef, useEffect } from 'react'
 //COMPONENTS
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import BackgroundHome from '@/components/BackgroundHome'
+
 import ExperienceItem from './components/ExperienceItem'
 import AboutMe from '@/components/AboutMe'
+
 import Header from '@/components/Header/index.tsx'
 import SocialNetworks from '../SocialNetworks'
 
@@ -44,7 +46,7 @@ const Home: React.FC = () => {
   const scrollTo = (ref: React.RefObject<HTMLDivElement>) => {
 
     ref.current?.scrollIntoView({ behavior: 'smooth' })
-    
+
   }
 
   useEffect(() => {
