@@ -5,9 +5,11 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import BackgroundHome from '@/components/BackgroundHome'
 
 import ExperienceItem from './components/ExperienceItem'
+
 import AboutMe from '@/components/AboutMe'
 
 import Header from '@/components/Header/index.tsx'
+
 import SocialNetworks from '../SocialNetworks'
 
 import { faBriefcase } from '@fortawesome/free-solid-svg-icons'
