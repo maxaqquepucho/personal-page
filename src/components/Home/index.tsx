@@ -57,9 +57,10 @@ const Home: React.FC = () => {
       '#experience': experienceRef,
       '#about-me': aboutMeRef,
     }
-    console.log(path)
+    
 
     setTimeout(() => {
+      
       if (Object.keys(refToHash).includes(path || '')) {
         // const ref = refToHash[path as keyof typeof refToHash]
         // scrollTo(ref)
