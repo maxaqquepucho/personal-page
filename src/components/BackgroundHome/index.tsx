@@ -22,7 +22,7 @@ const BackgroundHome: React.FC = () => {
       {/* light:from-white */}
 
       <span className="absolute bottom-0 left-0 h-48 w-full bg-gradient-to-t  to-transparent from-black"></span>
-     
+
       {/* light:from-white */}
       <div className="bg-container-home" style={{ perspective: '1000px' }}>
         <div
@@ -33,7 +33,9 @@ const BackgroundHome: React.FC = () => {
           }}
         ></div>
         <div className="bg-rotate-home">
+
           <div className="bg-square-lines-home dark-bg-home"></div>
+          
         </div>
       </div>
     </>
