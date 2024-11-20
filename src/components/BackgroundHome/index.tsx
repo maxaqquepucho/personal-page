@@ -20,7 +20,9 @@ const BackgroundHome: React.FC = () => {
 
       <span className="absolute left-0 top-[20vh] h-[50vh] w-full bg-gradient-to-b  to-transparent from-black"></span>
       {/* light:from-white */}
+
       <span className="absolute bottom-0 left-0 h-48 w-full bg-gradient-to-t  to-transparent from-black"></span>
+     
       {/* light:from-white */}
       <div className="bg-container-home" style={{ perspective: '1000px' }}>
         <div
