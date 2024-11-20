@@ -77,7 +77,7 @@ const Home: React.FC = () => {
             <section className="text-gray-300 flex flex-col-reverse md:flex-row justify-between m-auto max-w-5xl  pt-20">
               <div className="text-center md:text-left flex-grow max-w-2xl ">
                 <h1 className="text-gray-200  text-4xl sm:text-5xl font-bold">
-                  Hola, Soy Max <br /> Aqquepucho
+                  Hola, Soy Max <br /> Aqq
                 </h1>
                 <p className="text-xl mt-6 text-gray-300 [&>strong]:text-blue-400">
                   +6 años de experiencia como{' '}
