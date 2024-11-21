@@ -12,6 +12,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v4
+    - run: git fetch
     - run: git checkout staging
     - run: git merge main
     - run: git push origin staging
