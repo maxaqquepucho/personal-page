@@ -32,11 +32,11 @@ const experienceList = [
     description: `Comenzamos con 20 personas y llegamos a ser +280. He participado en diferentes equipos desarrollando las plataformas B2C y B2B utilizando tecnologías como Vue 3, Pinia, TypeScript y TailwindCSS. A la vez, la aplicación móvil en NativeScript para (Android/iOS).`,
   },
   {
-    title: 'Full Stack Developer (freelance)',
+    title: 'Full Stack Developer',
     company: 'Softdynamic',
-    date: '2019 Julio - 2019 Octubre ',
+    date: '2018 - 2019 Octubre ',
     description:
-      'Ejecuté un proyecto para administrar los seguros de RIMAC, utilizando Vue.js con Vuex en el front-end y desarrollando una API en Laravel con una base de datos en PostgreSQL en el back-end.',
+      'Desarrollé una aplicación de escritorio con Electron JS y una plataforma web de gestión de archivos en Vue.js, similar a Google Drive. Implementé servicios en una API PHP, migré servicios desde PHP Manila y desarrollé módulos de mantenimiento en Laravel para un e-commerce.',
   },
 ]
 
