@@ -33,9 +33,7 @@ const BackgroundHome: React.FC = () => {
           }}
         ></div>
         <div className="bg-rotate-home">
-
           <div className="bg-square-lines-home dark-bg-home"></div>
-          
         </div>
       </div>
     </>

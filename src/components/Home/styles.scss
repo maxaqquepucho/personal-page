@@ -70,12 +70,7 @@
 }
 
 .about-me-home {
-  background: rgb(0, 6, 24);
-  background: linear-gradient(
-    90deg,
-    rgba(0, 6, 24, 1) 0%,
-    rgba(14, 2, 7, 1) 100%
-  );
+  @apply bg-gradient-to-r from-[rgb(0,6,24)] to-[rgb(14,2,7)];
 }
 
 @keyframes border_spin {
