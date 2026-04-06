@@ -13,6 +13,7 @@
   "dependencies": {
     "@astrojs/react": "^5.0.2",
     "@fontsource-variable/onest": "^5.0.6",
+    "@phosphor-icons/react": "^2.1.10",
     "@types/react": "^19.2.14",
     "@types/react-dom": "^19.2.3",
     "astro": "^6.1.3",

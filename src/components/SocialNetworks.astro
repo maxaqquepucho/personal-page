@@ -17,7 +17,7 @@ import { socialLinks } from '@/data/social'
           item.hideName && '!px-2'
         )}
       >
-        <Fragment set:html={item.svg} />
+        <item.icon size={16} weight="regular" />
         {!item.hideName && <span class="ml-2">{item.name}</span>}
       </a>
     ))
