@@ -23,7 +23,7 @@ export const experienceList: ExperienceEntry[] = [
   {
     title: 'Full Stack Developer',
     company: 'Softdynamic',
-    date: '2018 - 2019 Octubre ',
+    date: '2018 - 2019 Octubre',
     description:
       'Desarrollé una aplicación de escritorio con Electron JS y una plataforma web de gestión de archivos en Vue.js, similar a Google Drive. Implementé servicios en una API PHP, migré servicios desde PHP Manila y desarrollé módulos de mantenimiento en Laravel para un e-commerce.',
   },
