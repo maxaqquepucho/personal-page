@@ -1,0 +1,17 @@
+@import 'tailwindcss';
+@import 'tw-animate-css';
+
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  --fd-background: 0 0% 3.9%;
+}
+
+html {
+  font-family: 'Onest Variable', system-ui, sans-serif;
+  scroll-behavior: smooth;
+}
+
+.home-body-bg {
+  background-color: hsl(var(--fd-background) / 1);
+}
