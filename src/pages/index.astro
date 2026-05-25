@@ -1,0 +1,173 @@
+---
+import Layout from '@/layouts/Layout.astro'
+import Header from '@/components/Header.astro'
+import BackgroundHome from '@/components/BackgroundHome.astro'
+import SocialNetworks from '@/components/SocialNetworks.astro'
+import ExperienceItem from '@/components/ExperienceItem.astro'
+import AboutMe from '@/components/AboutMe.astro'
+import Footer from '@/components/Footer.astro'
+import { experienceList } from '@/data/experience'
+import { Briefcase } from '@phosphor-icons/react/ssr'
+
+import ProfilePhoto from '@/assets/img/max-picture-square-optimized.jpg'
+---
+
+<Layout>
+  <Header />
+  <main>
+    <section class="relative overflow-hidden h-full">
+      <div class="hidden sm:block">
+        <BackgroundHome />
+      </div>
+
+      <div class="px-4 relative md:pt-28 backdrop-blur-sm">
+        <section
+          class="text-gray-300 flex flex-col-reverse md:flex-row justify-between m-auto max-w-5xl pt-20"
+        >
+          <div class="text-center md:text-left flex-grow max-w-2xl">
+            <h1 class="text-gray-200 text-4xl sm:text-5xl font-bold">
+              Hola, Soy Max <br /> Aqquepucho
+            </h1>
+            <p
+              class="text-xl mt-6 text-gray-300 [&>strong]:text-blue-400"
+            >
+              +6 años de experiencia como{' '}
+              <strong>
+                Desarrollador de Software y apasionado por la tecnología.
+              </strong>{' '}
+              Tengo una curiosidad insaciable por crear, aprender y sobre todo
+              contribuir a nuestro planeta con <strong>Tech.</strong>
+            </p>
+            <SocialNetworks />
+          </div>
+          <div class="mb-6 md:mb-0 flex justify-center md:justify-end">
+            <div class="profile-photo profile-border">
+              <i></i>
+              <div
+                class="z-[-1] pointer-events-none absolute left-1/2 top-1/2 h-[261px] w-[261px] -translate-x-1/2 -translate-y-1/2 bg-gradient-to-b from-[#000000] to-[#48279c] mix-blend-normal blur-[30px] opacity-[0.15]"
+              >
+              </div>
+              <img
+                class="z-20"
+                src={ProfilePhoto.src}
+                alt="Max's profile photo"
+              />
+            </div>
+          </div>
+        </section>
+
+        <section id="experience" class="max-w-5xl m-auto pt-20">
+          <div
+            class="flex items-center text-3xl font-semibold text-gray-200"
+          >
+            <Briefcase size={32} className="mr-4" />
+            <h3>Experiencia laboral</h3>
+          </div>
+          <ul class="py-16">
+            {
+              experienceList.map(item => (
+                <li>
+                  <ExperienceItem item={item} />
+                </li>
+              ))
+            }
+          </ul>
+        </section>
+      </div>
+    </section>
+
+    <div id="about-me" class="px-4 about-me-home border-t border-gray-800">
+      <AboutMe />
+    </div>
+  </main>
+  <Footer />
+</Layout>
+
+<style lang="scss" is:global>
+  .profile-photo {
+    padding: 2rem;
+    width: 12rem;
+    max-height: 15rem;
+
+    @media (min-width: 768px) {
+      padding: 2.5rem;
+      width: 15rem;
+    }
+
+    img {
+      border-radius: 9999px;
+    }
+  }
+
+  .profile-border {
+    --border-radius: 12px;
+    --border-size: 1px;
+    --padding: 1px;
+    --border-bg: conic-gradient(
+      from 180deg at 50% 50%,
+      #e92a67 0deg,
+      #a853ba 112.5deg,
+      #2a8af6 228.75deg,
+      rgba(42, 138, 246, 0) 360deg
+    );
+    position: relative;
+    overflow: hidden;
+    font-size: 2rem;
+    border-radius: var(--border-radius);
+    display: inline-block;
+    z-index: 0;
+    backface-visibility: hidden;
+    perspective: 1000;
+    transform: translateZ(0);
+
+    i {
+      content: '';
+      opacity: 1;
+      position: absolute;
+      top: var(--border-size);
+      right: var(--border-size);
+      bottom: var(--border-size);
+      left: var(--border-size);
+      padding: var(--border-size);
+      -webkit-mask:
+        linear-gradient(#fff 0 0) content-box,
+        linear-gradient(#fff 0 0);
+      mask:
+        linear-gradient(#fff 0 0) content-box,
+        linear-gradient(#fff 0 0);
+      -webkit-mask-composite: xor;
+      mask-composite: exclude;
+      z-index: -1;
+      border-radius: calc(var(--border-radius) + var(--border-size));
+
+      &::before {
+        content: '';
+        display: block;
+        background: var(--border-bg);
+        box-shadow: 0 0 40px 20px var(--border-bg);
+        width: calc(100% * 1.41421356237);
+        padding-bottom: calc(100% * 1.41421356237);
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        border-radius: 100%;
+        z-index: -2;
+        animation: border_spin 5s linear infinite;
+      }
+    }
+  }
+
+  .about-me-home {
+    background: linear-gradient(to right, rgb(0, 6, 24), rgb(14, 2, 7));
+  }
+
+  @keyframes border_spin {
+    0% {
+      transform: translate(-50%, -50%) rotate(1turn);
+    }
+    100% {
+      transform: translate(-50%, -50%) rotate(0);
+    }
+  }
+</style>
