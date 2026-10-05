@@ -11,7 +11,7 @@ export const experienceList: ExperienceEntry[] = [
     company: 'Even',
     date: '2024 Octubre - Presente',
     description:
-      'Somos un grupo de 20 - 30 personas que trabajamos desarrollando software para que los artistas puedan conectar con sus fans y comunidades de manera directa. Usamos tecnologías como React/React Native, Next.js, TypeScript, TailwindCSS, Docker, entre otras.',
+      'Trabajamos con un enfoque AI-first: Claude Code y otros agentes, potenciados con Skills, Plugins y MCPs, son parte central de nuestro día a día. Así, un equipo de 20 - 30 personas construye software para que los artistas conecten directamente con sus fans y comunidades. Stack: React/React Native, Next.js, TypeScript, TailwindCSS y Docker.',
   },
   {
     title: 'Software Engineer',
