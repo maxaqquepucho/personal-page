@@ -7,14 +7,14 @@ export interface ExperienceEntry {
 
 export const experienceList: ExperienceEntry[] = [
   {
-    title: 'Software Developer',
+    title: 'Software Engineer',
     company: 'Even',
     date: '2024 Octubre - Presente',
     description:
       'Somos un grupo de 20 - 30 personas que trabajamos desarrollando software para que los artistas puedan conectar con sus fans y comunidades de manera directa. Usamos tecnologías como React/React Native, Next.js, TypeScript, TailwindCSS, Docker, entre otras.',
   },
   {
-    title: 'Software Developer',
+    title: 'Software Engineer',
     company: 'Global66',
     date: '2019 - 2024 Agosto',
     description:
